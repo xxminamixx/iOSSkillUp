@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E9EC0E5D1D360160008E5516 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC0E5C1D360160008E5516 /* main.m */; };
+		E9EC0E601D360160008E5516 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC0E5F1D360160008E5516 /* AppDelegate.m */; };
+		E9EC0E631D360160008E5516 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC0E621D360160008E5516 /* ViewController.m */; };
+		E9EC0E661D360160008E5516 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EC0E641D360160008E5516 /* Main.storyboard */; };
+		E9EC0E691D360160008E5516 /* iOS_Education.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9EC0E671D360160008E5516 /* iOS_Education.xcdatamodeld */; };
+		E9EC0E6B1D360160008E5516 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9EC0E6A1D360160008E5516 /* Assets.xcassets */; };
+		E9EC0E6E1D360160008E5516 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EC0E6C1D360160008E5516 /* LaunchScreen.storyboard */; };
+		E9EC0E791D360160008E5516 /* iOS_EducationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC0E781D360160008E5516 /* iOS_EducationUITests.m */; };
+		E9EC0E851D36020F008E5516 /* Rectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC0E841D36020F008E5516 /* Rectangle.m */; };
+		E9EC0E881D3602AB008E5516 /* Square.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC0E871D3602AB008E5516 /* Square.m */; };
+		E9EC0E911D36246A008E5516 /* Reak.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC0E901D36246A008E5516 /* Reak.m */; };
+		E9EC0E941D3635E8008E5516 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC0E931D3635E8008E5516 /* ModalViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E9EC0E751D360160008E5516 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9EC0E501D360160008E5516 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9EC0E571D360160008E5516;
+			remoteInfo = "iOS Education";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E9EC0E581D360160008E5516 /* iOS Education.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Education.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9EC0E5C1D360160008E5516 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E9EC0E5E1D360160008E5516 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E9EC0E5F1D360160008E5516 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E9EC0E611D360160008E5516 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E9EC0E621D360160008E5516 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E9EC0E651D360160008E5516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E9EC0E681D360160008E5516 /* iOS_Education.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOS_Education.xcdatamodel; sourceTree = "<group>"; };
+		E9EC0E6A1D360160008E5516 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E9EC0E6D1D360160008E5516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E9EC0E6F1D360160008E5516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9EC0E741D360160008E5516 /* iOS EducationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS EducationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9EC0E781D360160008E5516 /* iOS_EducationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_EducationUITests.m; sourceTree = "<group>"; };
+		E9EC0E7A1D360160008E5516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9EC0E831D36020F008E5516 /* Rectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rectangle.h; sourceTree = "<group>"; };
+		E9EC0E841D36020F008E5516 /* Rectangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rectangle.m; sourceTree = "<group>"; };
+		E9EC0E861D3602AB008E5516 /* Square.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Square.h; sourceTree = "<group>"; };
+		E9EC0E871D3602AB008E5516 /* Square.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Square.m; sourceTree = "<group>"; };
+		E9EC0E8F1D36246A008E5516 /* Reak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reak.h; sourceTree = "<group>"; };
+		E9EC0E901D36246A008E5516 /* Reak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reak.m; sourceTree = "<group>"; };
+		E9EC0E921D3635E8008E5516 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		E9EC0E931D3635E8008E5516 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E9EC0E551D360160008E5516 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9EC0E711D360160008E5516 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E9EC0E4F1D360160008E5516 = {
+			isa = PBXGroup;
+			children = (
+				E9EC0E5A1D360160008E5516 /* iOS Education */,
+				E9EC0E771D360160008E5516 /* iOS EducationUITests */,
+				E9EC0E591D360160008E5516 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E9EC0E591D360160008E5516 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9EC0E581D360160008E5516 /* iOS Education.app */,
+				E9EC0E741D360160008E5516 /* iOS EducationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9EC0E5A1D360160008E5516 /* iOS Education */ = {
+			isa = PBXGroup;
+			children = (
+				E9EC0E5E1D360160008E5516 /* AppDelegate.h */,
+				E9EC0E5F1D360160008E5516 /* AppDelegate.m */,
+				E9EC0E611D360160008E5516 /* ViewController.h */,
+				E9EC0E621D360160008E5516 /* ViewController.m */,
+				E9EC0E921D3635E8008E5516 /* ModalViewController.h */,
+				E9EC0E931D3635E8008E5516 /* ModalViewController.m */,
+				E9EC0E8F1D36246A008E5516 /* Reak.h */,
+				E9EC0E901D36246A008E5516 /* Reak.m */,
+				E9EC0E831D36020F008E5516 /* Rectangle.h */,
+				E9EC0E841D36020F008E5516 /* Rectangle.m */,
+				E9EC0E861D3602AB008E5516 /* Square.h */,
+				E9EC0E871D3602AB008E5516 /* Square.m */,
+				E9EC0E641D360160008E5516 /* Main.storyboard */,
+				E9EC0E6A1D360160008E5516 /* Assets.xcassets */,
+				E9EC0E6C1D360160008E5516 /* LaunchScreen.storyboard */,
+				E9EC0E6F1D360160008E5516 /* Info.plist */,
+				E9EC0E671D360160008E5516 /* iOS_Education.xcdatamodeld */,
+				E9EC0E5B1D360160008E5516 /* Supporting Files */,
+			);
+			path = "iOS Education";
+			sourceTree = "<group>";
+		};
+		E9EC0E5B1D360160008E5516 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E9EC0E5C1D360160008E5516 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E9EC0E771D360160008E5516 /* iOS EducationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E9EC0E781D360160008E5516 /* iOS_EducationUITests.m */,
+				E9EC0E7A1D360160008E5516 /* Info.plist */,
+			);
+			path = "iOS EducationUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E9EC0E571D360160008E5516 /* iOS Education */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9EC0E7D1D360160008E5516 /* Build configuration list for PBXNativeTarget "iOS Education" */;
+			buildPhases = (
+				E9EC0E541D360160008E5516 /* Sources */,
+				E9EC0E551D360160008E5516 /* Frameworks */,
+				E9EC0E561D360160008E5516 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS Education";
+			productName = "iOS Education";
+			productReference = E9EC0E581D360160008E5516 /* iOS Education.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E9EC0E731D360160008E5516 /* iOS EducationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9EC0E801D360160008E5516 /* Build configuration list for PBXNativeTarget "iOS EducationUITests" */;
+			buildPhases = (
+				E9EC0E701D360160008E5516 /* Sources */,
+				E9EC0E711D360160008E5516 /* Frameworks */,
+				E9EC0E721D360160008E5516 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9EC0E761D360160008E5516 /* PBXTargetDependency */,
+			);
+			name = "iOS EducationUITests";
+			productName = "iOS EducationUITests";
+			productReference = E9EC0E741D360160008E5516 /* iOS EducationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E9EC0E501D360160008E5516 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Minami Kyohei";
+				TargetAttributes = {
+					E9EC0E571D360160008E5516 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = EX674L8SA3;
+					};
+					E9EC0E731D360160008E5516 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = EX674L8SA3;
+						TestTargetID = E9EC0E571D360160008E5516;
+					};
+				};
+			};
+			buildConfigurationList = E9EC0E531D360160008E5516 /* Build configuration list for PBXProject "iOS Education" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E9EC0E4F1D360160008E5516;
+			productRefGroup = E9EC0E591D360160008E5516 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E9EC0E571D360160008E5516 /* iOS Education */,
+				E9EC0E731D360160008E5516 /* iOS EducationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E9EC0E561D360160008E5516 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9EC0E6E1D360160008E5516 /* LaunchScreen.storyboard in Resources */,
+				E9EC0E6B1D360160008E5516 /* Assets.xcassets in Resources */,
+				E9EC0E661D360160008E5516 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9EC0E721D360160008E5516 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E9EC0E541D360160008E5516 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9EC0E881D3602AB008E5516 /* Square.m in Sources */,
+				E9EC0E691D360160008E5516 /* iOS_Education.xcdatamodeld in Sources */,
+				E9EC0E631D360160008E5516 /* ViewController.m in Sources */,
+				E9EC0E601D360160008E5516 /* AppDelegate.m in Sources */,
+				E9EC0E941D3635E8008E5516 /* ModalViewController.m in Sources */,
+				E9EC0E5D1D360160008E5516 /* main.m in Sources */,
+				E9EC0E911D36246A008E5516 /* Reak.m in Sources */,
+				E9EC0E851D36020F008E5516 /* Rectangle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9EC0E701D360160008E5516 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9EC0E791D360160008E5516 /* iOS_EducationUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E9EC0E761D360160008E5516 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9EC0E571D360160008E5516 /* iOS Education */;
+			targetProxy = E9EC0E751D360160008E5516 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E9EC0E641D360160008E5516 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9EC0E651D360160008E5516 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E9EC0E6C1D360160008E5516 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9EC0E6D1D360160008E5516 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E9EC0E7B1D360160008E5516 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E9EC0E7C1D360160008E5516 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E9EC0E7E1D360160008E5516 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "iOS Education/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "test.iOS-Education";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E9EC0E7F1D360160008E5516 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "iOS Education/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "test.iOS-Education";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E9EC0E811D360160008E5516 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "iOS EducationUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "test.iOS-EducationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "iOS Education";
+			};
+			name = Debug;
+		};
+		E9EC0E821D360160008E5516 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "iOS EducationUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "test.iOS-EducationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "iOS Education";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E9EC0E531D360160008E5516 /* Build configuration list for PBXProject "iOS Education" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9EC0E7B1D360160008E5516 /* Debug */,
+				E9EC0E7C1D360160008E5516 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9EC0E7D1D360160008E5516 /* Build configuration list for PBXNativeTarget "iOS Education" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9EC0E7E1D360160008E5516 /* Debug */,
+				E9EC0E7F1D360160008E5516 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9EC0E801D360160008E5516 /* Build configuration list for PBXNativeTarget "iOS EducationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9EC0E811D360160008E5516 /* Debug */,
+				E9EC0E821D360160008E5516 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E9EC0E671D360160008E5516 /* iOS_Education.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E9EC0E681D360160008E5516 /* iOS_Education.xcdatamodel */,
+			);
+			currentVersion = E9EC0E681D360160008E5516 /* iOS_Education.xcdatamodel */;
+			path = iOS_Education.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E9EC0E501D360160008E5516 /* Project object */;
+}
