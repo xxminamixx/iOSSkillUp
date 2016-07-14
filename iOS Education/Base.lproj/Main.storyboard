@@ -86,10 +86,19 @@
                                     <action selector="dismissModalAction:" destination="c0z-Ps-Oxu" eventType="touchUpInside" id="gPW-at-2HA"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="mPb-y2-ofc">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="490153167.667193">
+                                    <!--2016-07-14 01:39:27 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="datePicker" destination="mPb-y2-ofc" id="L2U-6Y-67b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2aE-ru-sZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

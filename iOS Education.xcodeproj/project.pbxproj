@@ -106,6 +106,7 @@
 		E911CDD01D37205E00E34260 /*  Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E911CDD11D37208800E34260 /* Print-50.png */,
 			);
 			name = " Resource";
 			sourceTree = "<group>";
@@ -131,7 +132,6 @@
 		E9EC0E5A1D360160008E5516 /* iOS Education */ = {
 			isa = PBXGroup;
 			children = (
-				E911CDD11D37208800E34260 /* Print-50.png */,
 				E911CDD01D37205E00E34260 /*  Resource */,
 				E911CDCF1D37201200E34260 /* View */,
 				E911CDCE1D371FEE00E34260 /* Controller */,

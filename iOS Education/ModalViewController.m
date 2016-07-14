@@ -9,6 +9,7 @@
 #import "ModalViewController.h"
 
 @interface ModalViewController ()
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 - (IBAction)dismissModalAction:(id)sender;
 
 @end
@@ -18,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self.datePicker addTarget:self action:@selector(pickerDidChange) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,4 +40,10 @@
 - (IBAction)dismissModalAction:(id)sender {
     [self dismissModalView];
 }
+
+- (void)pickerDidChange
+{
+    NSLog(@"変更されました。");
+}
+
 @end
