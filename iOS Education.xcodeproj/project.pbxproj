@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E911CDD21D37208800E34260 /* Print-50.png in Resources */ = {isa = PBXBuildFile; fileRef = E911CDD11D37208800E34260 /* Print-50.png */; };
 		E9EC0E5D1D360160008E5516 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC0E5C1D360160008E5516 /* main.m */; };
 		E9EC0E601D360160008E5516 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC0E5F1D360160008E5516 /* AppDelegate.m */; };
 		E9EC0E631D360160008E5516 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC0E621D360160008E5516 /* ViewController.m */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E911CDD11D37208800E34260 /* Print-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Print-50.png"; sourceTree = "<group>"; };
 		E9EC0E581D360160008E5516 /* iOS Education.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Education.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EC0E5C1D360160008E5516 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E9EC0E5E1D360160008E5516 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,6 +76,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E911CDCE1D371FEE00E34260 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E9EC0E8F1D36246A008E5516 /* Reak.h */,
+				E9EC0E901D36246A008E5516 /* Reak.m */,
+				E9EC0E831D36020F008E5516 /* Rectangle.h */,
+				E9EC0E841D36020F008E5516 /* Rectangle.m */,
+				E9EC0E861D3602AB008E5516 /* Square.h */,
+				E9EC0E871D3602AB008E5516 /* Square.m */,
+				E9EC0E5E1D360160008E5516 /* AppDelegate.h */,
+				E9EC0E5F1D360160008E5516 /* AppDelegate.m */,
+				E9EC0E611D360160008E5516 /* ViewController.h */,
+				E9EC0E621D360160008E5516 /* ViewController.m */,
+				E9EC0E921D3635E8008E5516 /* ModalViewController.h */,
+				E9EC0E931D3635E8008E5516 /* ModalViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E911CDCF1D37201200E34260 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E9EC0E641D360160008E5516 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E911CDD01D37205E00E34260 /*  Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = " Resource";
+			sourceTree = "<group>";
+		};
 		E9EC0E4F1D360160008E5516 = {
 			isa = PBXGroup;
 			children = (
@@ -95,19 +131,10 @@
 		E9EC0E5A1D360160008E5516 /* iOS Education */ = {
 			isa = PBXGroup;
 			children = (
-				E9EC0E5E1D360160008E5516 /* AppDelegate.h */,
-				E9EC0E5F1D360160008E5516 /* AppDelegate.m */,
-				E9EC0E611D360160008E5516 /* ViewController.h */,
-				E9EC0E621D360160008E5516 /* ViewController.m */,
-				E9EC0E921D3635E8008E5516 /* ModalViewController.h */,
-				E9EC0E931D3635E8008E5516 /* ModalViewController.m */,
-				E9EC0E8F1D36246A008E5516 /* Reak.h */,
-				E9EC0E901D36246A008E5516 /* Reak.m */,
-				E9EC0E831D36020F008E5516 /* Rectangle.h */,
-				E9EC0E841D36020F008E5516 /* Rectangle.m */,
-				E9EC0E861D3602AB008E5516 /* Square.h */,
-				E9EC0E871D3602AB008E5516 /* Square.m */,
-				E9EC0E641D360160008E5516 /* Main.storyboard */,
+				E911CDD11D37208800E34260 /* Print-50.png */,
+				E911CDD01D37205E00E34260 /*  Resource */,
+				E911CDCF1D37201200E34260 /* View */,
+				E911CDCE1D371FEE00E34260 /* Controller */,
 				E9EC0E6A1D360160008E5516 /* Assets.xcassets */,
 				E9EC0E6C1D360160008E5516 /* LaunchScreen.storyboard */,
 				E9EC0E6F1D360160008E5516 /* Info.plist */,
@@ -218,6 +245,7 @@
 			files = (
 				E9EC0E6E1D360160008E5516 /* LaunchScreen.storyboard in Resources */,
 				E9EC0E6B1D360160008E5516 /* Assets.xcassets in Resources */,
+				E911CDD21D37208800E34260 /* Print-50.png in Resources */,
 				E9EC0E661D360160008E5516 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

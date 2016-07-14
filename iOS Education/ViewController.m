@@ -21,6 +21,50 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    /*** NavigationController add button***/
+    
+    //Itemの色を黒に設定
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+    
+    UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc]
+                            initWithTitle:@"left"
+                            style:UIBarButtonItemStylePlain
+                            target:self
+                            action:@selector(leftItem)];
+    // 左にボタンを追加
+    // self.navigationItem.leftBarButtonItem = leftBtn;
+    
+    // 用意されたボタンスタイルを用いる
+    //style は Stop,Undo, Play, Organize,Camera,Bookmarksなどがある
+    UIBarButtonItem * rightBtn = [[UIBarButtonItem alloc]
+                                   initWithBarButtonSystemItem:UIBarButtonSystemItemPlay
+                                   target:self
+                                   action:@selector(rightItem)];
+    
+    // 右にボタン追加
+    // self.navigationItem.rightBarButtonItem = rightBtn;
+    
+    // 複数のアイテムを追加する
+    UIBarButtonItem *otherRightBtn = [[UIBarButtonItem alloc]
+                                      initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks
+                                      target:self
+                                      action:@selector(rightItem)];
+    // 右側に2つのアイテムを追加
+    self.navigationItem.rightBarButtonItems = @[rightBtn, otherRightBtn];
+    
+    UIButton *printImage = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 30)];
+    
+    // buttonにimageセット
+    [printImage setBackgroundImage:[UIImage imageNamed:@"Print-50.png"] forState:UIControlStateNormal];
+    [printImage addTarget:self action:@selector(leftItem) forControlEvents:UIControlEventTouchUpInside];
+    
+    //作成したボタンをNavigationItemとしてセット
+    UIBarButtonItem *othreLeftBtn = [[UIBarButtonItem alloc] initWithCustomView: printImage];
+    
+    // 左に2つのアイテムを追加
+    self.navigationItem.leftBarButtonItems = @[leftBtn, othreLeftBtn];
+    
+    
     /*** init ***/
     Square *square = [[Square alloc ]init];
     NSLog(@"%f", square.width);
@@ -84,4 +128,13 @@
     [self presentViewController:modalViewController animated:YES completion:nil];
 }
 
+- (void)leftItem
+{
+    NSLog(@"NavigationLeftItem is Pushing!");
+}
+
+- (void)rightItem
+{
+    NSLog(@"NavigationRightItem is Pushing!");
+}
 @end
