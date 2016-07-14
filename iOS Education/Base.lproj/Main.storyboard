@@ -76,8 +76,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="mPb-y2-ofc">
+                                <rect key="frame" x="0.0" y="445" width="375" height="222"/>
+                                <date key="date" timeIntervalSinceReferenceDate="490153167.667193">
+                                    <!--2016-07-14 01:39:27 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="ja_JP"/>
+                            </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nis-ny-Gks">
-                                <rect key="frame" x="140" y="319" width="94" height="30"/>
+                                <rect key="frame" x="140" y="20" width="94" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Close">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -86,17 +93,19 @@
                                     <action selector="dismissModalAction:" destination="c0z-Ps-Oxu" eventType="touchUpInside" id="gPW-at-2HA"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="mPb-y2-ofc">
-                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="490153167.667193">
-                                    <!--2016-07-14 01:39:27 +0000-->
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="5" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxp-EE-7jJ">
+                                <rect key="frame" x="0.0" y="205" width="375" height="212"/>
+                                <date key="date" timeIntervalSinceReferenceDate="490154784.00134701">
+                                    <!--2016-07-14 02:06:24 +0000-->
                                 </date>
+                                <locale key="locale" localeIdentifier="ja_JP"/>
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="CoutDownTimer" destination="Fxp-EE-7jJ" id="0gk-0N-in0"/>
                         <outlet property="datePicker" destination="mPb-y2-ofc" id="L2U-6Y-67b"/>
                     </connections>
                 </viewController>

@@ -8,9 +8,12 @@
 
 #import "ModalViewController.h"
 
+NSInteger oneDay = 86400;
+
 @interface ModalViewController ()
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 - (IBAction)dismissModalAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UIDatePicker *CoutDownTimer;
 
 @end
 
@@ -20,7 +23,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    /*** DatePicker ***/
+    
+    // DatePickerの変更を受ける
     [self.datePicker addTarget:self action:@selector(pickerDidChange) forControlEvents:UIControlEventValueChanged];
+    
+    // 分刻みの指定をする
+    self.datePicker.minuteInterval = 10;
+    
+    // 指定できる最小の値を設定
+    self.datePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:oneDay * (-7)];
+    
+    //　指定できる最大の値を設定
+    self.datePicker.maximumDate = [NSDate dateWithTimeIntervalSinceNow:oneDay * 7];
+    
+    // DatePickerの変更を受ける
+    [self.CoutDownTimer addTarget:self action:@selector(countChange) forControlEvents:UIControlEventValueChanged];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,7 +62,12 @@
 
 - (void)pickerDidChange
 {
-    NSLog(@"変更されました。");
+    NSLog(@"%@", self.datePicker.date);
+}
+
+- (void)countChange
+{
+    NSLog(@"%f", self.CoutDownTimer.countDownDuration);
 }
 
 @end
