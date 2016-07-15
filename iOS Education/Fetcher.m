@@ -35,10 +35,12 @@
     }];
 }
 
-- (void) wikipediaAPIFetcher
+- (void) wikipediaAPIFetcher:(completedBlocks)blocks
 {
     NSURL *url = [NSURL URLWithString:@"https://ja.wikipedia.org/w/api.php?format=json&action=query&prop=revisions&titles=%E6%99%82%E8%A8%88&rvprop=content"];
     NSURLRequest *request = [NSURLRequest requestWithURL: url];
+    // Entity格納用の配列
+    NSMutableArray *watchAtrribute = [NSMutableArray array];
     
     NSOperationQueue *queue = [NSOperationQueue new];
     [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *res, NSData *data, NSError *error) {
@@ -53,12 +55,10 @@
         WikipediaEntity *entity = [WikipediaEntity new];
         entity.title = [dict valueForKeyPath:@"pages.7525.title"];
         entity.contents = [dict valueForKeyPath:@"pages.7525.revisions.*"];
-        
-        NSLog(@"%@", entity.title);
-        NSLog(@"%@", entity.contents);
-        
+        [watchAtrribute addObject:entity];
+        blocks(watchAtrribute);
      }];
-
+//    return watchAtrribute;
 }
 
 @end

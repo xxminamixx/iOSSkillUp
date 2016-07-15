@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+// コントローラに配列を受け渡す
+typedef void (^completedBlocks)(NSMutableArray *);
+
 @interface Fetcher : NSObject
 
 - (void) sendSynchronousFoodFetcher;
 - (void) sendAsynchronousFoodFetcher;
-- (void) wikipediaAPIFetcher;
+- (void) wikipediaAPIFetcher:(completedBlocks)blocks;
 
 @end

@@ -11,10 +11,14 @@
 #import "Reak.h"
 #import "ModalViewController.h"
 #import "Fetcher.h"
+#import "WikipediaEntity.h"
 
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *label;
+
+@property NSMutableArray *watchAtrribute;
+
 - (IBAction)pushedSendSynchronousButton:(id)sender;
 - (IBAction)pushedWikipediaButton:(id)sender;
 
@@ -132,7 +136,13 @@
 
 - (IBAction)pushedWikipediaButton:(id)sender {
     Fetcher *fetcher = [Fetcher new];
-    [fetcher wikipediaAPIFetcher];
+    [fetcher wikipediaAPIFetcher:^(NSMutableArray *array){
+        // 配列を受け取る
+        self.watchAtrribute = array;
+//        WikipediaEntity *entity = [WikipediaEntity new];
+//        entity = self.watchAtrribute[0];
+//        self.label.text = entity.contents;
+    }];
 }
 
 - (IBAction)pushedSendAsynchronousButton:(id)sender {
