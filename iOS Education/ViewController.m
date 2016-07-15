@@ -10,10 +10,17 @@
 #import "Square.h"
 #import "Reak.h"
 #import "ModalViewController.h"
+#import "Fetcher.h"
 
 @interface ViewController ()
-- (IBAction)ModalAction:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UILabel *label;
+- (IBAction)pushedSendSynchronousButton:(id)sender;
+- (IBAction)pushedWikipediaButton:(id)sender;
+
+- (IBAction)pushedSendAsynchronousButton:(id)sender;
+- (IBAction)pushedModalButton:(id)sender;
+
 @end
 
 @implementation ViewController
@@ -118,9 +125,26 @@
     NSLog(@"通知を受信しました");
 }
 
-- (IBAction)ModalAction:(id)sender {
+- (IBAction)pushedSendSynchronousButton:(id)sender {
+    Fetcher *fetcher = [Fetcher new];
+    [fetcher sendSynchronousFoodFetcher];
+}
+
+- (IBAction)pushedWikipediaButton:(id)sender {
+    Fetcher *fetcher = [Fetcher new];
+    [fetcher wikipediaAPIFetcher];
+}
+
+- (IBAction)pushedSendAsynchronousButton:(id)sender {
+    Fetcher *fetcher = [Fetcher new];
+    [fetcher sendAsynchronousFoodFetcher];
+}
+
+
+- (IBAction)pushedModalButton:(id)sender {
     [self showModalView];
 }
+
 
 //　Modalで遷移
 -(void)showModalView{
