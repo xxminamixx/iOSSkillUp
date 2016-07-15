@@ -8,6 +8,7 @@
 
 #import "Fetcher.h"
 #import "WikipediaEntity.h"
+#import "Utils.h"
 
 @implementation Fetcher
 
@@ -41,16 +42,21 @@
     
     NSOperationQueue *queue = [NSOperationQueue new];
     [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *res, NSData *data, NSError *error) {
-//        NSLog(@"%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+        
+        // JSONを配列に格納
         NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-//        NSLog(@"本文:%@", [array valueForKeyPath:@"query.pages"]);
+        
+        //最上階層を指定する
         NSDictionary *dict = [array valueForKey:@"query"];
         
+        // Entityに格納
         WikipediaEntity *entity = [WikipediaEntity new];
         entity.title = [dict valueForKeyPath:@"pages.7525.title"];
         entity.contents = [dict valueForKeyPath:@"pages.7525.revisions.*"];
+        
         NSLog(@"%@", entity.title);
         NSLog(@"%@", entity.contents);
+        
      }];
 
 }

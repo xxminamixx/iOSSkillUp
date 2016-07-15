@@ -10,6 +10,7 @@
 		E911CDD21D37208800E34260 /* Print-50.png in Resources */ = {isa = PBXBuildFile; fileRef = E911CDD11D37208800E34260 /* Print-50.png */; };
 		E93B9A481D386CBB003E1963 /* Fetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B9A471D386CBB003E1963 /* Fetcher.m */; };
 		E9C191321D38A0FC00F112FB /* WikipediaEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C191311D38A0FC00F112FB /* WikipediaEntity.m */; };
+		E9C191351D38AEC100F112FB /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C191341D38AEC100F112FB /* Utils.m */; };
 		E9EC0E5D1D360160008E5516 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC0E5C1D360160008E5516 /* main.m */; };
 		E9EC0E601D360160008E5516 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC0E5F1D360160008E5516 /* AppDelegate.m */; };
 		E9EC0E631D360160008E5516 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC0E621D360160008E5516 /* ViewController.m */; };
@@ -40,6 +41,8 @@
 		E93B9A471D386CBB003E1963 /* Fetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fetcher.m; sourceTree = "<group>"; };
 		E9C191301D38A0FC00F112FB /* WikipediaEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikipediaEntity.h; sourceTree = "<group>"; };
 		E9C191311D38A0FC00F112FB /* WikipediaEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikipediaEntity.m; sourceTree = "<group>"; };
+		E9C191331D38AEC100F112FB /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		E9C191341D38AEC100F112FB /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		E9EC0E581D360160008E5516 /* iOS Education.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Education.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EC0E5C1D360160008E5516 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E9EC0E5E1D360160008E5516 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 				E93B9A471D386CBB003E1963 /* Fetcher.m */,
 				E9C191301D38A0FC00F112FB /* WikipediaEntity.h */,
 				E9C191311D38A0FC00F112FB /* WikipediaEntity.m */,
+				E9C191331D38AEC100F112FB /* Utils.h */,
+				E9C191341D38AEC100F112FB /* Utils.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -283,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9EC0E881D3602AB008E5516 /* Square.m in Sources */,
+				E9C191351D38AEC100F112FB /* Utils.m in Sources */,
 				E93B9A481D386CBB003E1963 /* Fetcher.m in Sources */,
 				E9EC0E691D360160008E5516 /* iOS_Education.xcdatamodeld in Sources */,
 				E9EC0E631D360160008E5516 /* ViewController.m in Sources */,
