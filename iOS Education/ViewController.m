@@ -17,12 +17,13 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 
 @property NSMutableArray *watchAtrribute;
 
 - (IBAction)pushedSendSynchronousButton:(id)sender;
 - (IBAction)pushedWikipediaButton:(id)sender;
-
+- (IBAction)pushedSegueButton:(id)sender;
 - (IBAction)pushedSendAsynchronousButton:(id)sender;
 - (IBAction)pushedModalButton:(id)sender;
 
@@ -196,5 +197,13 @@
 - (void)rightItem
 {
     NSLog(@"NavigationRightItem is Pushing!");
+}
+- (IBAction)pushedSegueButton:(id)sender {
+    
+    if ([self.textField.text isEqualToString:@"a"]) {
+        [self performSegueWithIdentifier:@"Segue2" sender:self];
+    } else {
+        [self performSegueWithIdentifier:@"Segue1" sender:self];
+    }
 }
 @end

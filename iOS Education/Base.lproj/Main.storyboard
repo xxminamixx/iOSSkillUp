@@ -91,6 +91,18 @@
                                     <action selector="pushedWikipediaButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bm2-Sz-xbG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjX-xg-eLF">
+                                <rect key="frame" x="166" y="555" width="42" height="30"/>
+                                <state key="normal" title="segue"/>
+                                <connections>
+                                    <action selector="pushedSegueButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aDq-Cl-ffW"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yu6-AB-225">
+                                <rect key="frame" x="96" y="196" width="183" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -110,6 +122,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="label" destination="c5h-0u-wbz" id="c4e-lV-0bH"/>
+                        <outlet property="textField" destination="yu6-AB-225" id="COq-ul-x3r"/>
+                        <segue destination="c0z-Ps-Oxu" kind="push" identifier="Segue2" id="EcN-lx-lCA"/>
+                        <segue destination="AHR-H7-BJx" kind="push" identifier="Segue1" id="kWC-OQ-BKS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -156,6 +171,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="giq-9h-6EP"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="CoutDownTimer" destination="Fxp-EE-7jJ" id="0gk-0N-in0"/>
@@ -187,11 +203,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="kK3-uV-Eid"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y1R-KM-bls" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="283.5" y="1108.5"/>
+            <point key="canvasLocation" x="665.5" y="1136.5"/>
         </scene>
     </scenes>
 </document>
