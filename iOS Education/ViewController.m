@@ -12,6 +12,7 @@
 #import "ModalViewController.h"
 #import "Fetcher.h"
 #import "WikipediaEntity.h"
+#import "Human.h"
 
 @interface ViewController ()
 
@@ -104,11 +105,19 @@
     NSLog(@"storng:%@ / weak:%@", strongStr2, weakStr2);
     
     // メモリリーク発生参照の循環
-    Reak *friend1 = [Reak new];
-    Reak *friend2 = [Reak new];
-    [friend1 setFriend: friend2];
-    [friend2 setFriend: friend1];
-
+//    Reak *friend1 = [Reak new];
+//    Reak *friend2 = [Reak new];
+//    [friend1 setFriend: friend2];
+//    [friend2 setFriend: friend1];
+    
+    Human *human = [Human new];
+    human.name = @"jack";
+    human.tall = 2;
+    human.weight = 65;
+    
+    Human *newHuman = [human copy];
+    NSLog(@"name :%@", newHuman.name);
+    
 }
 
 - (void)didReceiveMemoryWarning {
