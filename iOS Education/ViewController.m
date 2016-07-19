@@ -173,7 +173,24 @@
 
 - (void)leftItem
 {
+    
     NSLog(@"NavigationLeftItem is Pushing!");
+    
+    // 例外を発生させcatchで処理を行う
+    @try {
+        
+        [NSException raise:@"error" format:@"left button pushed"];
+        
+    }
+    @catch (NSException *exception) {
+       
+        NSLog(@"exception = %@", exception.description);
+        
+    }
+    @finally {
+        NSLog(@"例外処理を通過しました");
+    }
+   
 }
 
 - (void)rightItem
