@@ -17,5 +17,6 @@ typedef void (^completedBlocks)(NSMutableArray *);
 - (void) sendSynchronousFoodFetcher;
 - (void) sendAsynchronousFoodFetcher;
 - (void) wikipediaAPIFetcher:(completedBlocks)blocks;
+- (NSMutableArray *)acterRelationRequest:(NSInteger)num;
 
 @end

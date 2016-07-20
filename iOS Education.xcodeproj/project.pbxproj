@@ -12,6 +12,7 @@
 		E91E41491D3F0F21000EE05B /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E91E41471D3F0F21000EE05B /* CustomTableViewCell.m */; };
 		E91E414A1D3F0F21000EE05B /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E91E41481D3F0F21000EE05B /* CustomTableViewCell.xib */; };
 		E91E414D1D3F6BC8000EE05B /* DDXMLElement+Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = E91E414C1D3F6BC8000EE05B /* DDXMLElement+Dictionary.m */; };
+		E91E41501D3F6F93000EE05B /* ActerRelationshipEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E91E414F1D3F6F93000EE05B /* ActerRelationshipEntity.m */; };
 		E93B9A481D386CBB003E1963 /* Fetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B9A471D386CBB003E1963 /* Fetcher.m */; };
 		E974AB8D1D3DE62F00346C2F /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = E974AB8C1D3DE62F00346C2F /* Human.m */; };
 		E974AB901D3E044000346C2F /* SegueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E974AB8F1D3E044000346C2F /* SegueViewController.m */; };
@@ -51,6 +52,8 @@
 		E91E41481D3F0F21000EE05B /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		E91E414B1D3F6BC8000EE05B /* DDXMLElement+Dictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DDXMLElement+Dictionary.h"; path = "../../../RECRUIT API/HotpepperAPIApp/HotpepperAPIApp/DDXMLElement+Dictionary.h"; sourceTree = "<group>"; };
 		E91E414C1D3F6BC8000EE05B /* DDXMLElement+Dictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DDXMLElement+Dictionary.m"; path = "../../../RECRUIT API/HotpepperAPIApp/HotpepperAPIApp/DDXMLElement+Dictionary.m"; sourceTree = "<group>"; };
+		E91E414E1D3F6F93000EE05B /* ActerRelationshipEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActerRelationshipEntity.h; sourceTree = "<group>"; };
+		E91E414F1D3F6F93000EE05B /* ActerRelationshipEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActerRelationshipEntity.m; sourceTree = "<group>"; };
 		E93B9A461D386CBB003E1963 /* Fetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fetcher.h; sourceTree = "<group>"; };
 		E93B9A471D386CBB003E1963 /* Fetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fetcher.m; sourceTree = "<group>"; };
 		E974AB8B1D3DE62F00346C2F /* Human.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Human.h; sourceTree = "<group>"; };
@@ -172,6 +175,8 @@
 				E93B9A471D386CBB003E1963 /* Fetcher.m */,
 				E9C191301D38A0FC00F112FB /* WikipediaEntity.h */,
 				E9C191311D38A0FC00F112FB /* WikipediaEntity.m */,
+				E91E414E1D3F6F93000EE05B /* ActerRelationshipEntity.h */,
+				E91E414F1D3F6F93000EE05B /* ActerRelationshipEntity.m */,
 				E9C191331D38AEC100F112FB /* Utils.h */,
 				E9C191341D38AEC100F112FB /* Utils.m */,
 			);
@@ -388,6 +393,7 @@
 			files = (
 				E974AB901D3E044000346C2F /* SegueViewController.m in Sources */,
 				E9EC0E881D3602AB008E5516 /* Square.m in Sources */,
+				E91E41501D3F6F93000EE05B /* ActerRelationshipEntity.m in Sources */,
 				E91E414D1D3F6BC8000EE05B /* DDXMLElement+Dictionary.m in Sources */,
 				E9C191351D38AEC100F112FB /* Utils.m in Sources */,
 				E93B9A481D386CBB003E1963 /* Fetcher.m in Sources */,

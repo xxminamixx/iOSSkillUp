@@ -10,9 +10,10 @@
 #import "WikipediaEntity.h"
 #import "Utils.h"
 #import "DDXMLElement+Dictionary.h"
+#import "ActerRelationshipEntity.h"
 
 // 土偶と関連する記事のURL
-NSString * const kClayFigureStr = @"https://ja.wikipedia.org/w/api.php?format=xml&action=query&list=search&srsearch=%E5%9C%9F%E5%81%B6";
+NSString *acterStr = @"https://ja.wikipedia.org/w/api.php?format=xml&action=query&list=search&srsearch=%E3%82%A8%E3%83%9E%E3%83%BB%E3%83%AF%E3%83%88%E3%82%BD%E3%83%B3&srlimit=";
 
 @implementation Fetcher
 
@@ -65,9 +66,34 @@ NSString * const kClayFigureStr = @"https://ja.wikipedia.org/w/api.php?format=xm
 //    return watchAtrribute;
 }
 
-- (void)ClayFigureRelationRequest
+- (NSMutableArray *)acterRelationRequest:(NSInteger)num
 {
-    NSURL *url = [NSURL URLWithString: kClayFigureStr];
+    NSMutableString *acterURL = [NSMutableString string];
+    [acterURL setString: acterStr];
+    NSString *castNum = [NSString stringWithFormat:@"%ld", num];
+    [acterURL appendString: castNum];
+    NSURL *url = [NSURL URLWithString: acterStr];
+    //xmlファイルの場所の設定
+    NSData *data=[NSData dataWithContentsOfURL:url];
+    
+    NSMutableArray *resultArray = [NSMutableArray array];
+    
+    //xmlファイルを取得
+    DDXMLDocument *doc = [[DDXMLDocument alloc]initWithData:data options:0 error:nil];
+    
+    //要素を抜き出す時のルートパスの設定
+    NSDictionary *xml = [[doc rootElement] convertDictionary];
+    NSDictionary *dict = [xml valueForKeyPath:@"api.query.search"];
+    
+    for (NSDictionary *elements in dict) {
+        ActerRelationshipEntity *entity = [ActerRelationshipEntity new];
+        entity.title = [elements valueForKey:@"title"];
+        entity.text = [elements valueForKey:@"snippet"];
+        
+        [resultArray addObject: entity];
+    }
+    
+    return resultArray;
 }
 
 @end

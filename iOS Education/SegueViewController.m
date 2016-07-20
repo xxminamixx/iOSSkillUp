@@ -10,6 +10,7 @@
 #import "ModalViewController.h" // 定数を用いて遷移するため
 #import "ViewController.h" // 定数を用いて遷移するため
 #import "CustomTableViewCell.h"
+#import "Fetcher.h"
 
 NSString * const kLongName40 = @"１２３４５６７８９８７６５４３２１１２３４５６７８９８７６５４３２１１２３４２３★";
 NSString * const kLongName50 = @"１２３４５６７８９８７６５４３２１１２３４５６７８９８７６５４３２１１２３４２３１２３４５６７８９０★";
@@ -25,7 +26,7 @@ NSString * const kLongName140 = @"１２３４５６７８９８７６５４３�
 
 const NSInteger arrayCount = 11; // 表示する配列の要素が11つのため
 
-NSInteger pushedReadFurtherCount = 0; //更読みを押した回数をカウント
+NSInteger ReadFurtherNumber = 10; //更読みを押した回数をカウント
 
 @interface SegueViewController ()
 
@@ -48,7 +49,10 @@ NSInteger pushedReadFurtherCount = 0; //更読みを押した回数をカウン�
     UINib *nib = [UINib nibWithNibName:@"CustomTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"customCell" ];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    [self setArrayValue];
+    
+    Fetcher *fetcher = [Fetcher new];
+    self.arrayForCellText = [fetcher acterRelationRequest:ReadFurtherNumber];
+//    [self setArrayValue];
 }
 
 - (void)didReceiveMemoryWarning
@@ -98,28 +102,22 @@ NSInteger pushedReadFurtherCount = 0; //更読みを押した回数をカウン�
         // 通常のセルがタップされた処理
     } else {
         // さらに読み込む処理
-        pushedReadFurtherCount++;
-        
-        if (pushedReadFurtherCount % 2 != 0) {
-            [self readFurther];
-        } else {
-            [self setArrayValue];
-        }
+        ReadFurtherNumber += 10;
         
         [self.tableView reloadData];
         
     }
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    //一番下までスクロールしたかどうか
-    if(self.tableView.contentOffset.y >= (self.tableView.contentSize.height - self.tableView.bounds.size.height))
-    {
-        [self readFurther];
-        [self.tableView reloadData];
-    }
-}
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+//{
+//    //一番下までスクロールしたかどうか
+//    if(self.tableView.contentOffset.y >= (self.tableView.contentSize.height - self.tableView.bounds.size.height))
+//    {
+//        [self readFurther];
+//        [self.tableView reloadData];
+//    }
+//}
 
 - (void)setArrayValue
 {
