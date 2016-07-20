@@ -194,19 +194,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ho-gk-hOL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ho-gk-hOL">
                                 <rect key="frame" x="166" y="24" width="43" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gyD-lY-dlz"/>
+                                    <constraint firstAttribute="width" constant="43" id="smd-qy-yTI"/>
+                                </constraints>
                                 <state key="normal" title="Modal"/>
                                 <connections>
                                     <action selector="pushedModalButton:" destination="AHR-H7-BJx" eventType="touchUpInside" id="nRR-lL-Qtf"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="noe-v4-1c6">
-                                <rect key="frame" x="0.0" y="75" width="374" height="592"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="noe-v4-1c6">
+                                <rect key="frame" x="-4" y="75" width="382" height="592"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="noe-v4-1c6" secondAttribute="trailing" constant="-19" id="PyL-9S-DtR"/>
+                            <constraint firstItem="noe-v4-1c6" firstAttribute="top" secondItem="0Ho-gk-hOL" secondAttribute="bottom" constant="21" id="bTf-Gn-1SJ"/>
+                            <constraint firstItem="hLa-ZJ-IlG" firstAttribute="top" secondItem="noe-v4-1c6" secondAttribute="bottom" id="fGH-cU-NOL"/>
+                            <constraint firstItem="noe-v4-1c6" firstAttribute="leading" secondItem="liY-D9-7kf" secondAttribute="leadingMargin" constant="-20" id="gO1-It-fvk"/>
+                            <constraint firstItem="0Ho-gk-hOL" firstAttribute="top" secondItem="t36-zu-DMK" secondAttribute="bottom" constant="4" id="j4A-XT-uXj"/>
+                            <constraint firstItem="0Ho-gk-hOL" firstAttribute="centerX" secondItem="liY-D9-7kf" secondAttribute="centerX" id="q5x-k0-fIb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kK3-uV-Eid"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

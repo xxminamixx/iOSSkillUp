@@ -11,8 +11,8 @@
 #import "ViewController.h" // 定数を用いて遷移するため
 #import "CustomTableViewCell.h"
 
-NSString * const kLongName40 = @"じゅげむじゅげむごこうのすりきれかいじゃりすいぎょのすいぎょうまつうんらいまつふうらいまつくうねるところにすむところやぶ";
-NSString * const kLongName50 = @"じゅげむじゅげむごこうのすりきれかいじゃりすいぎょのすいぎょうまつうんらいまつふうらいまつくうねるところにすむところやぶらこうじのぶらこうじ";
+NSString * const kLongName40 = @"じゅげむじゅげむごこうのすりきれかいじゃりすいぎょのすいぎょうまつうんらいまつふうらいま";
+NSString * const kLongName50 = @"じゅげむじゅげむごこうのすりきれかいじゃりすいぎょのすいぎょうまつうんらいまつふうらいまつくうねるところにす";
 NSString * const kLongName60 = @"じゅげむじゅげむごこうのすりきれかいじゃりすいぎょのすいぎょうまつうんらいまつふうらいまつくうねるところにすむところやぶらこうじ";
 NSString * const kLongName70 = @"じゅげむじゅげむごこうのすりきれかいじゃりすいぎょのすいぎょうまつうんらいまつふうらいまつくうねるところにすむところやぶらこうじのぶらこうじぱいぽぱい";
 NSString * const kLongName80 = @"じゅげむじゅげむごこうのすりきれかいじゃりすいぎょのすいぎょうまつうんらいまつふうらいまつくうねるところにすむところやぶらこうじのぶらこうじぱいぽぱい";
@@ -23,6 +23,7 @@ NSString * const kLongName120 = @"じゅげむじゅげむごこうのすりき�
 NSString * const kLongName130 = @"じゅげむじゅげむごこうのすりきれかいじゃりすいぎょのすいぎょうまつうんらいまつふうらいまつくうねるところにすむところやぶらこうじのぶらこうじぱいぽぱいぽぱいぽのしゅーりんがんしゅーりんがんのぐーりんだいぐーりんだいのぽんぽこぴーのぽんぽこなのちょうき";
 NSString * const kLongName140 = @"じゅげむじゅげむごこうのすりきれかいじゃりすいぎょのすいぎょうまつうんらいまつふうらいまつくうねるところにすむところやぶらこうじのぶらこうじぱいぽぱいぽぱいぽのしゅーりんがんしゅーりんがんのぐーりんだいぐーりんだいのぽんぽこぴーのぽんぽこなのちょうきゅうめいのちょうすけ";
 
+const NSInteger arrayCount = 11; // 表示する配列の要素が11つのため
 
 @interface SampleViewController ()
 
@@ -41,18 +42,6 @@ NSString * const kLongName140 = @"じゅげむじゅげむごこうのすりき�
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
-    [self.arrayForCellText addObject:kLongName40];
-    [self.arrayForCellText addObject:kLongName50];
-    [self.arrayForCellText addObject:kLongName60];
-    [self.arrayForCellText addObject:kLongName70];
-    [self.arrayForCellText addObject:kLongName80];
-    [self.arrayForCellText addObject:kLongName90];
-    [self.arrayForCellText addObject:kLongName100];
-    [self.arrayForCellText addObject:kLongName110];
-    [self.arrayForCellText addObject:kLongName120];
-    [self.arrayForCellText addObject:kLongName130];
-    [self.arrayForCellText addObject:kLongName140];
     
     UINib *nib = [UINib nibWithNibName:@"CustomTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"customCell" ];
@@ -74,16 +63,19 @@ NSString * const kLongName140 = @"じゅげむじゅげむごこうのすりき�
 #pragma mark - UITableView Delegate
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 14;
+    return arrayCount;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CustomTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"customCell"];
-//    if (cell == nil) {
-//        cell = [[CustomTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CustomCell"];
-//    }
-//    [cell setTextToLabel: self.arrayForCellText[indexPath.row]];
+    if (cell == nil) {
+        cell = [[CustomTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"customCell"];
+    }
+    if (indexPath.row) {
+        NSMutableArray *array = [self setArrayValue];
+        [cell setTextToLabel: array[indexPath.row]];
+    }
     return cell;
 }
 
@@ -91,7 +83,7 @@ NSString * const kLongName140 = @"じゅげむじゅげむごこうのすりき�
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CustomTableViewCell *cell = (CustomTableViewCell*)[self tableView:self.tableView cellForRowAtIndexPath:indexPath];
-     cell.label.text = @"CellIdentifierという印がついたセル（同じ種類のセル）で使い回しができるものがあればそれを返してくれます";
+    
     return cell.height;
 }
 
@@ -102,6 +94,25 @@ NSString * const kLongName140 = @"じゅげむじゅげむごこうのすりき�
     } else {
         [self performSegueWithIdentifier:@"toViewController" sender:self];
     }
+}
+
+- (NSMutableArray *)setArrayValue
+{
+    NSMutableArray *array = [NSMutableArray array];
+    [array addObject:kLongName40];
+    [array addObject:kLongName50];
+    [array addObject:kLongName60];
+    [array addObject:kLongName70];
+    [array addObject:kLongName80];
+    [array addObject:kLongName90];
+    [array addObject:kLongName100];
+    [array addObject:kLongName110];
+    [array addObject:kLongName120];
+    [array addObject:kLongName130];
+    [array addObject:kLongName140];
+    
+
+    return array;
 }
 
 

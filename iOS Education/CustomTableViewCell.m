@@ -27,12 +27,13 @@
 
 - (CGFloat)height
 {
-    CGFloat pad = 5;
+    CGFloat margin = 10;
     CGFloat bodyLabelW = self.label.bounds.size.width;
     CGSize bodySize = [self.label.attributedText boundingRectWithSize:CGSizeMake(bodyLabelW, MAXFLOAT)
                                                                   options:NSStringDrawingUsesLineFragmentOrigin
                                                                   context:nil].size;
-    return bodySize.height + pad * 2;
+    
+    return bodySize.height + margin;
 }
 
 @end
