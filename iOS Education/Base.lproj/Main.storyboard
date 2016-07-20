@@ -21,7 +21,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a4Y-0d-LK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-327.5" y="357.5"/>
+            <point key="canvasLocation" x="-543.5" y="357.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -92,8 +92,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjX-xg-eLF">
-                                <rect key="frame" x="166" y="555" width="42" height="30"/>
-                                <state key="normal" title="segue"/>
+                                <rect key="frame" x="134" y="555" width="107" height="30"/>
+                                <state key="normal" title="toTableView"/>
                                 <connections>
                                     <action selector="pushedSegueButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aDq-Cl-ffW"/>
                                 </connections>
@@ -129,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="283.5" y="357.5"/>
+            <point key="canvasLocation" x="59.5" y="357.5"/>
         </scene>
         <!--Modal View Controller-->
         <scene sceneID="Gu1-Ml-o2E">
@@ -180,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2aE-ru-sZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="714.5" y="357.5"/>
+            <point key="canvasLocation" x="646.5" y="357.5"/>
         </scene>
         <!--Sample View Controller-->
         <scene sceneID="MhE-bw-Z5Y">
@@ -230,11 +230,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y1R-KM-bls" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="576.5" y="1265.5"/>
+            <point key="canvasLocation" x="59.5" y="1273.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Kmy-XA-5bB"/>
-        <segue reference="9zd-br-F5I"/>
+        <segue reference="EcN-lx-lCA"/>
     </inferredMetricsTieBreakers>
 </document>
