@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "93B5AE7A527A95917A3B04A7CEE124A0D4999E03",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "93B5AE7A527A95917A3B04A7CEE124A0D4999E03" : 0,
+    "309A1501ED702D78320C91660B604D74E4BB8989" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A0247DFE-A713-4017-A36A-5494E5063E37",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "93B5AE7A527A95917A3B04A7CEE124A0D4999E03" : "iOS%20Education\/",
+    "309A1501ED702D78320C91660B604D74E4BB8989" : "..\/RECRUIT%20API"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "iOS Education",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "iOS Education.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/xxminamixx\/RECRUIT_API.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "309A1501ED702D78320C91660B604D74E4BB8989"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/xxminamixx\/Objective-C_for_iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "93B5AE7A527A95917A3B04A7CEE124A0D4999E03"
+    }
+  ]
+}

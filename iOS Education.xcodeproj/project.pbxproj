@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		978808FD0276C27EC6E23716 /* libPods-iOS Education.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F05E485AAB7D9D5359A22A0 /* libPods-iOS Education.a */; };
 		E911CDD21D37208800E34260 /* Print-50.png in Resources */ = {isa = PBXBuildFile; fileRef = E911CDD11D37208800E34260 /* Print-50.png */; };
 		E91E41491D3F0F21000EE05B /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E91E41471D3F0F21000EE05B /* CustomTableViewCell.m */; };
 		E91E414A1D3F0F21000EE05B /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E91E41481D3F0F21000EE05B /* CustomTableViewCell.xib */; };
+		E91E414D1D3F6BC8000EE05B /* DDXMLElement+Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = E91E414C1D3F6BC8000EE05B /* DDXMLElement+Dictionary.m */; };
 		E93B9A481D386CBB003E1963 /* Fetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B9A471D386CBB003E1963 /* Fetcher.m */; };
 		E974AB8D1D3DE62F00346C2F /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = E974AB8C1D3DE62F00346C2F /* Human.m */; };
 		E974AB901D3E044000346C2F /* SegueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E974AB8F1D3E044000346C2F /* SegueViewController.m */; };
@@ -40,10 +42,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32A8E0E32BDCF30FF6192136 /* Pods-iOS Education.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Education.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS Education/Pods-iOS Education.debug.xcconfig"; sourceTree = "<group>"; };
+		8D27E7D3956F839C5B108C18 /* Pods-iOS Education.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Education.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS Education/Pods-iOS Education.release.xcconfig"; sourceTree = "<group>"; };
+		8F05E485AAB7D9D5359A22A0 /* libPods-iOS Education.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS Education.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E911CDD11D37208800E34260 /* Print-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Print-50.png"; sourceTree = "<group>"; };
 		E91E41461D3F0F21000EE05B /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		E91E41471D3F0F21000EE05B /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		E91E41481D3F0F21000EE05B /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		E91E414B1D3F6BC8000EE05B /* DDXMLElement+Dictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DDXMLElement+Dictionary.h"; path = "../../../RECRUIT API/HotpepperAPIApp/HotpepperAPIApp/DDXMLElement+Dictionary.h"; sourceTree = "<group>"; };
+		E91E414C1D3F6BC8000EE05B /* DDXMLElement+Dictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DDXMLElement+Dictionary.m"; path = "../../../RECRUIT API/HotpepperAPIApp/HotpepperAPIApp/DDXMLElement+Dictionary.m"; sourceTree = "<group>"; };
 		E93B9A461D386CBB003E1963 /* Fetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fetcher.h; sourceTree = "<group>"; };
 		E93B9A471D386CBB003E1963 /* Fetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fetcher.m; sourceTree = "<group>"; };
 		E974AB8B1D3DE62F00346C2F /* Human.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Human.h; sourceTree = "<group>"; };
@@ -83,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				978808FD0276C27EC6E23716 /* libPods-iOS Education.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +104,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1484C1C58235DF74D429296B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				32A8E0E32BDCF30FF6192136 /* Pods-iOS Education.debug.xcconfig */,
+				8D27E7D3956F839C5B108C18 /* Pods-iOS Education.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		92DCF458D50DB141D2364FC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F05E485AAB7D9D5359A22A0 /* libPods-iOS Education.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E911CDCE1D371FEE00E34260 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +166,8 @@
 		E93B9A451D386C7A003E1963 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E91E414B1D3F6BC8000EE05B /* DDXMLElement+Dictionary.h */,
+				E91E414C1D3F6BC8000EE05B /* DDXMLElement+Dictionary.m */,
 				E93B9A461D386CBB003E1963 /* Fetcher.h */,
 				E93B9A471D386CBB003E1963 /* Fetcher.m */,
 				E9C191301D38A0FC00F112FB /* WikipediaEntity.h */,
@@ -157,6 +184,8 @@
 				E9EC0E5A1D360160008E5516 /* iOS Education */,
 				E9EC0E771D360160008E5516 /* iOS EducationUITests */,
 				E9EC0E591D360160008E5516 /* Products */,
+				1484C1C58235DF74D429296B /* Pods */,
+				92DCF458D50DB141D2364FC0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -209,9 +238,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9EC0E7D1D360160008E5516 /* Build configuration list for PBXNativeTarget "iOS Education" */;
 			buildPhases = (
+				17C1EA71D464556971EA97B7 /* Check Pods Manifest.lock */,
 				E9EC0E541D360160008E5516 /* Sources */,
 				E9EC0E551D360160008E5516 /* Frameworks */,
 				E9EC0E561D360160008E5516 /* Resources */,
+				99E95A3CDAF7169A99CCD885 /* Embed Pods Frameworks */,
+				8419C32D5C9A98C83096F05C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -301,6 +333,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		17C1EA71D464556971EA97B7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8419C32D5C9A98C83096F05C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS Education/Pods-iOS Education-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99E95A3CDAF7169A99CCD885 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS Education/Pods-iOS Education-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E9EC0E541D360160008E5516 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -308,6 +388,7 @@
 			files = (
 				E974AB901D3E044000346C2F /* SegueViewController.m in Sources */,
 				E9EC0E881D3602AB008E5516 /* Square.m in Sources */,
+				E91E414D1D3F6BC8000EE05B /* DDXMLElement+Dictionary.m in Sources */,
 				E9C191351D38AEC100F112FB /* Utils.m in Sources */,
 				E93B9A481D386CBB003E1963 /* Fetcher.m in Sources */,
 				E974AB8D1D3DE62F00346C2F /* Human.m in Sources */,
@@ -447,6 +528,7 @@
 		};
 		E9EC0E7E1D360160008E5516 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32A8E0E32BDCF30FF6192136 /* Pods-iOS Education.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "iOS Education/Info.plist";
@@ -459,6 +541,7 @@
 		};
 		E9EC0E7F1D360160008E5516 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D27E7D3956F839C5B108C18 /* Pods-iOS Education.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "iOS Education/Info.plist";

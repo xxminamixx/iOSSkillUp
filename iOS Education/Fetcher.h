@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DDXMLDocument.h"
 
 // コントローラに配列を受け渡す
 typedef void (^completedBlocks)(NSMutableArray *);

@@ -9,6 +9,10 @@
 #import "Fetcher.h"
 #import "WikipediaEntity.h"
 #import "Utils.h"
+#import "DDXMLElement+Dictionary.h"
+
+// 土偶と関連する記事のURL
+NSString * const kClayFigureStr = @"https://ja.wikipedia.org/w/api.php?format=xml&action=query&list=search&srsearch=%E5%9C%9F%E5%81%B6";
 
 @implementation Fetcher
 
@@ -59,6 +63,11 @@
         blocks(watchAtrribute);
      }];
 //    return watchAtrribute;
+}
+
+- (void)ClayFigureRelationRequest
+{
+    NSURL *url = [NSURL URLWithString: kClayFigureStr];
 }
 
 @end

@@ -1,0 +1,12 @@
+PODS:
+  - KissXML (5.1.2):
+    - KissXML/Core (= 5.1.2)
+  - KissXML/Core (5.1.2)
+
+DEPENDENCIES:
+  - KissXML
+
+SPEC CHECKSUMS:
+  KissXML: 246c842586bb77110e04fb88e19376d96245c856
+
+COCOAPODS: 0.39.0
