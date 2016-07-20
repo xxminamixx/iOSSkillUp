@@ -200,6 +200,7 @@
 {
     NSLog(@"NavigationRightItem is Pushing!");
 }
+
 - (IBAction)pushedSegueButton:(id)sender {
     
     if ([self.textField.text isEqualToString:@"a"]) {

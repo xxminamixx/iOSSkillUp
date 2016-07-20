@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SampleViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface SegueViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 @end

@@ -12,7 +12,7 @@
 		E91E414A1D3F0F21000EE05B /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E91E41481D3F0F21000EE05B /* CustomTableViewCell.xib */; };
 		E93B9A481D386CBB003E1963 /* Fetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B9A471D386CBB003E1963 /* Fetcher.m */; };
 		E974AB8D1D3DE62F00346C2F /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = E974AB8C1D3DE62F00346C2F /* Human.m */; };
-		E974AB901D3E044000346C2F /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E974AB8F1D3E044000346C2F /* SampleViewController.m */; };
+		E974AB901D3E044000346C2F /* SegueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E974AB8F1D3E044000346C2F /* SegueViewController.m */; };
 		E9C191321D38A0FC00F112FB /* WikipediaEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C191311D38A0FC00F112FB /* WikipediaEntity.m */; };
 		E9C191351D38AEC100F112FB /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C191341D38AEC100F112FB /* Utils.m */; };
 		E9EC0E5D1D360160008E5516 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC0E5C1D360160008E5516 /* main.m */; };
@@ -48,8 +48,8 @@
 		E93B9A471D386CBB003E1963 /* Fetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fetcher.m; sourceTree = "<group>"; };
 		E974AB8B1D3DE62F00346C2F /* Human.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Human.h; sourceTree = "<group>"; };
 		E974AB8C1D3DE62F00346C2F /* Human.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Human.m; sourceTree = "<group>"; };
-		E974AB8E1D3E044000346C2F /* SampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleViewController.h; sourceTree = "<group>"; };
-		E974AB8F1D3E044000346C2F /* SampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleViewController.m; sourceTree = "<group>"; };
+		E974AB8E1D3E044000346C2F /* SegueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegueViewController.h; sourceTree = "<group>"; };
+		E974AB8F1D3E044000346C2F /* SegueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegueViewController.m; sourceTree = "<group>"; };
 		E9C191301D38A0FC00F112FB /* WikipediaEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikipediaEntity.h; sourceTree = "<group>"; };
 		E9C191311D38A0FC00F112FB /* WikipediaEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikipediaEntity.m; sourceTree = "<group>"; };
 		E9C191331D38AEC100F112FB /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
@@ -113,8 +113,8 @@
 				E9EC0E931D3635E8008E5516 /* ModalViewController.m */,
 				E974AB8B1D3DE62F00346C2F /* Human.h */,
 				E974AB8C1D3DE62F00346C2F /* Human.m */,
-				E974AB8E1D3E044000346C2F /* SampleViewController.h */,
-				E974AB8F1D3E044000346C2F /* SampleViewController.m */,
+				E974AB8E1D3E044000346C2F /* SegueViewController.h */,
+				E974AB8F1D3E044000346C2F /* SegueViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -306,7 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E974AB901D3E044000346C2F /* SampleViewController.m in Sources */,
+				E974AB901D3E044000346C2F /* SegueViewController.m in Sources */,
 				E9EC0E881D3602AB008E5516 /* Square.m in Sources */,
 				E9C191351D38AEC100F112FB /* Utils.m in Sources */,
 				E93B9A481D386CBB003E1963 /* Fetcher.m in Sources */,
