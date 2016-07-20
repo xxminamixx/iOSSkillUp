@@ -52,13 +52,10 @@ const NSInteger arrayCount = 11; // 表示する配列の要素が11つのため
     [super didReceiveMemoryWarning];
 }
 
-
-
 - (IBAction)pushedModalButton:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
 
 #pragma mark - UITableView Delegate
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -110,11 +107,15 @@ const NSInteger arrayCount = 11; // 表示する配列の要素が11つのため
     [array addObject:kLongName120];
     [array addObject:kLongName130];
     [array addObject:kLongName140];
-    
 
     return array;
 }
 
-
-
+//-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)FromInterfaceOrientation {
+//    if(FromInterfaceOrientation == UIInterfaceOrientationPortrait){
+//        [self.tableView reloadData];
+//    } else {
+//        [self.tableView reloadData];
+//    }
+//}
 @end
