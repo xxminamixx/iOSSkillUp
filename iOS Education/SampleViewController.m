@@ -7,8 +7,12 @@
 //
 
 #import "SampleViewController.h"
+#import "ModalViewController.h" // 定数を用いて遷移するため
+#import "ViewController.h" // 定数を用いて遷移するため
 
 @interface SampleViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 - (IBAction)pushedModalButton:(id)sender;
 
@@ -17,28 +21,62 @@
 @implementation SampleViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
 }
 
 - (void)didReceiveMemoryWarning {
+    
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)pushedModalButton:(id)sender {
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
+
+
+#pragma mark - UITableView Delegate
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 20;
+}
+
+-(UITableViewCell *)tableView:
+(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"CellIdentifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    return cell;
+}
+
+#pragma mark - UITableView DataSource
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 125;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row % 2 == 0) {
+        [self performSegueWithIdentifier:@"toModalViewController" sender:self];
+    } else {
+        [self performSegueWithIdentifier:@"toViewController" sender:self];
+    }
+    
+}
+
+
+
 @end

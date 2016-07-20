@@ -14,6 +14,8 @@
 #import "WikipediaEntity.h"
 #import "Human.h"
 
+//NSString * const kToViewController = @"ViewController";
+
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *label;

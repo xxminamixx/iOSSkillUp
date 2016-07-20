@@ -10,10 +10,14 @@
 
 NSInteger oneDay = 86400;
 
+//NSString * const kToModalViewController = @"toModalViewController";
+
 @interface ModalViewController ()
+
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
-- (IBAction)dismissModalAction:(id)sender;
 @property (weak, nonatomic) IBOutlet UIDatePicker *CoutDownTimer;
+
+- (IBAction)dismissModalAction:(id)sender;
 
 @end
 
