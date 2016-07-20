@@ -94,13 +94,6 @@ NSInteger pushedReadFurtherCount = 0; //更読みを押した回数をカウン�
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    // 同一コントローラから複数のセグエに条件分岐
-//    if (indexPath.row % 2 == 0) {
-//        [self performSegueWithIdentifier:@"toModalViewController" sender:self];
-//    } else {
-//        [self performSegueWithIdentifier:@"toViewController" sender:self];
-//    }
-    
     if (indexPath.row < arrayCount) {
         // 通常のセルがタップされた処理
     } else {
@@ -115,6 +108,16 @@ NSInteger pushedReadFurtherCount = 0; //更読みを押した回数をカウン�
         
         [self.tableView reloadData];
         
+    }
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    //一番下までスクロールしたかどうか
+    if(self.tableView.contentOffset.y >= (self.tableView.contentSize.height - self.tableView.bounds.size.height))
+    {
+        [self readFurther];
+        [self.tableView reloadData];
     }
 }
 
@@ -152,13 +155,4 @@ NSInteger pushedReadFurtherCount = 0; //更読みを押した回数をカウン�
     self.arrayForCellText = array;
 }
 
-
-
-//-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)FromInterfaceOrientation {
-//    if(FromInterfaceOrientation == UIInterfaceOrientationPortrait){
-//        [self.tableView reloadData];
-//    } else {
-//        [self.tableView reloadData];
-//    }
-//}
 @end
