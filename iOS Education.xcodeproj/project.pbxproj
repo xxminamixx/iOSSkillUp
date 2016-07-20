@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E911CDD21D37208800E34260 /* Print-50.png in Resources */ = {isa = PBXBuildFile; fileRef = E911CDD11D37208800E34260 /* Print-50.png */; };
+		E91E41491D3F0F21000EE05B /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E91E41471D3F0F21000EE05B /* CustomTableViewCell.m */; };
+		E91E414A1D3F0F21000EE05B /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E91E41481D3F0F21000EE05B /* CustomTableViewCell.xib */; };
 		E93B9A481D386CBB003E1963 /* Fetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B9A471D386CBB003E1963 /* Fetcher.m */; };
 		E974AB8D1D3DE62F00346C2F /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = E974AB8C1D3DE62F00346C2F /* Human.m */; };
 		E974AB901D3E044000346C2F /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E974AB8F1D3E044000346C2F /* SampleViewController.m */; };
@@ -39,6 +41,9 @@
 
 /* Begin PBXFileReference section */
 		E911CDD11D37208800E34260 /* Print-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Print-50.png"; sourceTree = "<group>"; };
+		E91E41461D3F0F21000EE05B /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		E91E41471D3F0F21000EE05B /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		E91E41481D3F0F21000EE05B /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		E93B9A461D386CBB003E1963 /* Fetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fetcher.h; sourceTree = "<group>"; };
 		E93B9A471D386CBB003E1963 /* Fetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fetcher.m; sourceTree = "<group>"; };
 		E974AB8B1D3DE62F00346C2F /* Human.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Human.h; sourceTree = "<group>"; };
@@ -118,6 +123,9 @@
 			isa = PBXGroup;
 			children = (
 				E9EC0E641D360160008E5516 /* Main.storyboard */,
+				E91E41461D3F0F21000EE05B /* CustomTableViewCell.h */,
+				E91E41471D3F0F21000EE05B /* CustomTableViewCell.m */,
+				E91E41481D3F0F21000EE05B /* CustomTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -279,6 +287,7 @@
 				E9EC0E6E1D360160008E5516 /* LaunchScreen.storyboard in Resources */,
 				E9EC0E6B1D360160008E5516 /* Assets.xcassets in Resources */,
 				E911CDD21D37208800E34260 /* Print-50.png in Resources */,
+				E91E414A1D3F0F21000EE05B /* CustomTableViewCell.xib in Resources */,
 				E9EC0E661D360160008E5516 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +314,7 @@
 				E9EC0E691D360160008E5516 /* iOS_Education.xcdatamodeld in Sources */,
 				E9EC0E631D360160008E5516 /* ViewController.m in Sources */,
 				E9C191321D38A0FC00F112FB /* WikipediaEntity.m in Sources */,
+				E91E41491D3F0F21000EE05B /* CustomTableViewCell.m in Sources */,
 				E9EC0E601D360160008E5516 /* AppDelegate.m in Sources */,
 				E9EC0E941D3635E8008E5516 /* ModalViewController.m in Sources */,
 				E9EC0E5D1D360160008E5516 /* main.m in Sources */,
