@@ -121,6 +121,26 @@
     Human *newHuman = [human copy];
     NSLog(@"name :%@", newHuman.name);
     
+    // タップジェスチャ検知
+    UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture)];
+    [self.view addGestureRecognizer:tapGesture];
+    
+    //　ダブルタップジェスチャ検知
+    UITapGestureRecognizer* doubleTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTapGesture)];
+    // デフォルトでnumberOfTapsRequiredが1になっている
+    doubleTapGesture.numberOfTapsRequired = 2;
+    [self.view addGestureRecognizer:doubleTapGesture];
+    
+    // 左へスワイプ
+    UISwipeGestureRecognizer* swipeLeftGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeLeftGesture)];
+    swipeLeftGesture.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.view addGestureRecognizer:swipeLeftGesture];
+    
+    // 右へスワイプ
+    UISwipeGestureRecognizer* swipeRightGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeRightGesture)];
+    swipeRightGesture.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:swipeRightGesture];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -210,4 +230,25 @@
     }
     
 }
+
+- (void)handleTapGesture
+{
+    NSLog(@"タップされました");
+}
+
+- (void)handleDoubleTapGesture
+{
+    NSLog(@"ダブルタップされました");
+}
+
+- (void)handleSwipeLeftGesture
+{
+    NSLog(@"左へスワイプしました");
+}
+
+- (void)handleSwipeRightGesture
+{
+    NSLog(@"右へスワイプしました");
+}
+
 @end

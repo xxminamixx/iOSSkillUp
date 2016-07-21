@@ -16,6 +16,8 @@
 		E93B9A481D386CBB003E1963 /* Fetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B9A471D386CBB003E1963 /* Fetcher.m */; };
 		E974AB8D1D3DE62F00346C2F /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = E974AB8C1D3DE62F00346C2F /* Human.m */; };
 		E974AB901D3E044000346C2F /* SegueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E974AB8F1D3E044000346C2F /* SegueViewController.m */; };
+		E989A12A1D40850D006A98F4 /* Tab1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E989A1291D40850D006A98F4 /* Tab1ViewController.m */; };
+		E989A12D1D4087E9006A98F4 /* Tab2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E989A12C1D4087E9006A98F4 /* Tab2ViewController.m */; };
 		E9C191321D38A0FC00F112FB /* WikipediaEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C191311D38A0FC00F112FB /* WikipediaEntity.m */; };
 		E9C191351D38AEC100F112FB /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C191341D38AEC100F112FB /* Utils.m */; };
 		E9EC0E5D1D360160008E5516 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC0E5C1D360160008E5516 /* main.m */; };
@@ -60,6 +62,10 @@
 		E974AB8C1D3DE62F00346C2F /* Human.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Human.m; sourceTree = "<group>"; };
 		E974AB8E1D3E044000346C2F /* SegueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegueViewController.h; sourceTree = "<group>"; };
 		E974AB8F1D3E044000346C2F /* SegueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegueViewController.m; sourceTree = "<group>"; };
+		E989A1281D40850D006A98F4 /* Tab1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tab1ViewController.h; sourceTree = "<group>"; };
+		E989A1291D40850D006A98F4 /* Tab1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tab1ViewController.m; sourceTree = "<group>"; };
+		E989A12B1D4087E9006A98F4 /* Tab2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tab2ViewController.h; sourceTree = "<group>"; };
+		E989A12C1D4087E9006A98F4 /* Tab2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tab2ViewController.m; sourceTree = "<group>"; };
 		E9C191301D38A0FC00F112FB /* WikipediaEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikipediaEntity.h; sourceTree = "<group>"; };
 		E9C191311D38A0FC00F112FB /* WikipediaEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikipediaEntity.m; sourceTree = "<group>"; };
 		E9C191331D38AEC100F112FB /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
@@ -143,6 +149,10 @@
 				E974AB8C1D3DE62F00346C2F /* Human.m */,
 				E974AB8E1D3E044000346C2F /* SegueViewController.h */,
 				E974AB8F1D3E044000346C2F /* SegueViewController.m */,
+				E989A12B1D4087E9006A98F4 /* Tab2ViewController.h */,
+				E989A12C1D4087E9006A98F4 /* Tab2ViewController.m */,
+				E989A1281D40850D006A98F4 /* Tab1ViewController.h */,
+				E989A1291D40850D006A98F4 /* Tab1ViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -391,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E989A12A1D40850D006A98F4 /* Tab1ViewController.m in Sources */,
 				E974AB901D3E044000346C2F /* SegueViewController.m in Sources */,
 				E9EC0E881D3602AB008E5516 /* Square.m in Sources */,
 				E91E41501D3F6F93000EE05B /* ActerRelationshipEntity.m in Sources */,
@@ -399,6 +410,7 @@
 				E93B9A481D386CBB003E1963 /* Fetcher.m in Sources */,
 				E974AB8D1D3DE62F00346C2F /* Human.m in Sources */,
 				E9EC0E691D360160008E5516 /* iOS_Education.xcdatamodeld in Sources */,
+				E989A12D1D4087E9006A98F4 /* Tab2ViewController.m in Sources */,
 				E9EC0E631D360160008E5516 /* ViewController.m in Sources */,
 				E9C191321D38A0FC00F112FB /* WikipediaEntity.m in Sources */,
 				E91E41491D3F0F21000EE05B /* CustomTableViewCell.m in Sources */,

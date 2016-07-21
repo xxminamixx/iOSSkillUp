@@ -1,27 +1,105 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SVF-JH-ZTP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jwJ-ya-jbS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="xcl-VG-W0c">
+        <!--Item-->
+        <scene sceneID="twB-fX-seW">
             <objects>
-                <navigationController id="SVF-JH-ZTP" sceneMemberID="viewController">
+                <navigationController id="jwJ-ya-jbS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="apG-d2-Vrv"/>
+                    <navigationItem key="navigationItem" id="0C3-3O-EGC"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DIn-ga-fP3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="M1n-ce-oTH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kCV-02-zwe"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iUf-m7-hvM"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a4Y-0d-LK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Add-GI-K6A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-543.5" y="357.5"/>
+            <point key="canvasLocation" x="-477.5" y="351.5"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="SXP-TP-wFe">
+            <objects>
+                <viewController id="Pjc-Cv-jeN" customClass="Tab2ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AsP-SB-pgV"/>
+                        <viewControllerLayoutGuide type="bottom" id="cL3-d9-m2r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7GA-hk-9jN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lt-yF-fAo">
+                                <rect key="frame" x="133" y="319" width="108" height="30"/>
+                                <state key="normal" title="changeTab1"/>
+                                <connections>
+                                    <action selector="pushedChangeTab1Button:" destination="Pjc-Cv-jeN" eventType="touchUpInside" id="XRD-v4-9QQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="7JS-mr-TU5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Zv-9Q-i6h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982.5" y="-575.5"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="MfQ-Vw-PmY">
+            <objects>
+                <viewController id="pof-3L-AcG" customClass="Tab1ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZKZ-lE-wD2"/>
+                        <viewControllerLayoutGuide type="bottom" id="ylQ-wJ-hk2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="upV-7w-nAs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxd-cX-qTC">
+                                <rect key="frame" x="146" y="319" width="84" height="30"/>
+                                <state key="normal" title="changeTab2"/>
+                                <connections>
+                                    <action selector="pushedChangeTab2Button:" destination="pof-3L-AcG" eventType="touchUpInside" id="yMx-By-5lq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="zwx-GS-b56"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yeU-Ax-vYU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="983" y="-1235"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7dN-45-kf3">
+            <objects>
+                <tabBarController id="LA0-n3-iDY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="L4v-38-WaF"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="gLr-qb-LC6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="pof-3L-AcG" kind="relationship" relationship="viewControllers" id="tEZ-lr-hUj"/>
+                        <segue destination="Pjc-Cv-jeN" kind="relationship" relationship="viewControllers" id="NGz-WJ-nnF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="avM-dq-ab8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="59.5" y="-795.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -103,6 +181,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nX2-sE-G9o">
+                                <rect key="frame" x="134" y="600" width="107" height="30"/>
+                                <state key="normal" title="tab"/>
+                                <connections>
+                                    <segue destination="LA0-n3-iDY" kind="push" id="RjT-cR-CUt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -123,8 +208,8 @@
                     <connections>
                         <outlet property="label" destination="c5h-0u-wbz" id="c4e-lV-0bH"/>
                         <outlet property="textField" destination="yu6-AB-225" id="COq-ul-x3r"/>
-                        <segue destination="c0z-Ps-Oxu" kind="modal" identifier="Segue2" id="EcN-lx-lCA"/>
-                        <segue destination="AHR-H7-BJx" kind="modal" identifier="Segue1" id="cHB-yV-Vrv"/>
+                        <segue destination="c0z-Ps-Oxu" kind="push" identifier="Segue2" id="EcN-lx-lCA"/>
+                        <segue destination="9fW-OS-dA8" kind="push" identifier="Segue1" id="cHB-yV-Vrv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -180,7 +265,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2aE-ru-sZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="646.5" y="357.5"/>
+            <point key="canvasLocation" x="1070.5" y="365.5"/>
         </scene>
         <!--Segue View Controller-->
         <scene sceneID="MhE-bw-Z5Y">
@@ -230,11 +315,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y1R-KM-bls" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="59.5" y="1273.5"/>
+            <point key="canvasLocation" x="1162.5" y="1457.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Z8S-Sk-oCw">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7NJ-Qd-JP8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9fW-OS-dA8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="za3-ag-sHf"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ai4-A0-Cv4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AHR-H7-BJx" kind="relationship" relationship="rootViewController" id="ASk-pn-Zh4"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="59.5" y="1457.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Kmy-XA-5bB"/>
+        <segue reference="iUf-m7-hvM"/>
         <segue reference="EcN-lx-lCA"/>
     </inferredMetricsTieBreakers>
 </document>
