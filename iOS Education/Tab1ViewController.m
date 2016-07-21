@@ -13,8 +13,9 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *idTextField;
-@property (weak, nonatomic) IBOutlet UITextField *tableNameTextField;
 @property (weak, nonatomic) IBOutlet UIPickerView *selectTableNamePicker;
+
+@property NSString *tableName;
 
 - (IBAction)pushedChangeTab2Button:(id)sender;
 - (IBAction)pushedCreateTableButton:(id)sender;
@@ -34,6 +35,7 @@
     self.alreadyDB = NO;
     self.selectTableNamePicker.delegate = self;
     self.selectTableNamePicker.dataSource = self;
+//    [self selectTableList];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,7 +50,7 @@
 
 - (IBAction)pushedCreateTableButton:(id)sender
 {
-    FMDatabase *db = [self connectingDB];
+    FMDatabase *db = [self connectingDB: self.tableName];
 
     //　テーブル作成
     NSString *sql = @"CREATE TABLE TEST_TABLE (name TEXT, id INTEGER);";
@@ -60,10 +62,10 @@
 
 - (IBAction)pushedInsertButton:(id)sender
 {
-    FMDatabase *db = [self connectingDB];
+    FMDatabase *db = [self connectingDB: self.tableName];
     
     NSMutableString *sql = [NSMutableString string];
-    [sql appendString:[NSString stringWithFormat:@"INSERT INTO TEST_TABLE (name, id) VALUES ('%@', %@)", self.nameTextField.text, self.idTextField.text]];
+    [sql appendString:[NSString stringWithFormat:@"INSERT INTO %@ (name, id) VALUES ('%@', %@)", self.tableName, self.nameTextField.text, self.idTextField.text]];
     
     [db open];
     [db executeUpdate:sql];
@@ -72,57 +74,36 @@
 
 - (IBAction)pushedSelectButton:(id)sender
 {
-    FMDatabase *db = [self connectingDB];
-    
-    if ([db executeQuery:@"select name,id from TEST_TABLE"]){
-        [db open];
-        FMResultSet *rs = [db executeQuery:@"select name,id from TEST_TABLE"];
-       
-            while ([rs next]){
-               NSInteger identifer = [rs intForColumn:@"id"];
-               NSString *name = [rs stringForColumn:@"name"];
-               NSLog(@"%ld", identifer);
-               NSLog(@"%@", name);
-           }
-        [db close];
-        [rs close];
-    }
+    FMDatabase *db = [self connectingDB: self.tableName];
+    [db open];
+    FMResultSet *rs = [db executeQuery:[NSString stringWithFormat:@"select name,id from %@", self.tableName]];
+   
+        while ([rs next]){
+           NSInteger identifer = [rs intForColumn:@"id"];
+           NSString *name = [rs stringForColumn:@"name"];
+           NSLog(@"%ld", identifer);
+           NSLog(@"%@", name);
+       }
+    [db close];
+    [rs close];
 }
 
 - (IBAction)pushedDropButton:(id)sender {
-    FMDatabase *db = [self connectingDB];
-    if ([db executeQuery:@"select name,id from TEST_TABLE"]) {
-        NSString *sql = @"DROP TABLE TEST_TABLE";
+    FMDatabase *db = [self connectingDB: self.tableName];
+        NSString *sql = [NSString stringWithFormat:@"DROP TABLE %@", self.tableName];
         [db open];
         [db executeUpdate:sql];
         [db close];
-    }
 }
 
--(FMDatabase *)connectingDB
+-(FMDatabase *)connectingDB:(NSString *)tableName
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains( NSDocumentDirectory, NSUserDomainMask, YES );
     NSString *dir = [paths objectAtIndex:0];
-    FMDatabase *db = [FMDatabase databaseWithPath: [dir stringByAppendingPathComponent:@"test.db"]];
+    FMDatabase *db = [FMDatabase databaseWithPath: [dir stringByAppendingPathComponent:tableName]];
     return db;
 }
 
-- (void) selectTableList
-{
-    FMDatabase *db = [self connectingDB];
-    [db open];
-    FMResultSet *rs = [db executeQuery:@"SHOW TABLES"];
-    
-    while ([rs next]){
-        NSInteger identifer = [rs intForColumn:@"id"];
-        NSString *name = [rs stringForColumn:@"name"];
-        NSLog(@"%ld", identifer);
-        NSLog(@"%@", name);
-    }
-    
-    [rs close];
-    [db close];
-}
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView*)pickerView
 {
@@ -136,8 +117,13 @@
 
 -(NSString*)pickerView:(UIPickerView*)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     
-       return [NSString stringWithFormat:@"%ld", row];
-    
+       return [NSString stringWithFormat:@"%@", [NSString stringWithFormat:@"table%ld", row + 1]];
 }
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    self.tableName = [NSString stringWithFormat:@"table%ld", row + 1];
+}
+
 
 @end
