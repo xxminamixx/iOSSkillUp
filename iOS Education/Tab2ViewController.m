@@ -26,7 +26,8 @@
     [super didReceiveMemoryWarning];
 }
 
-- (IBAction)pushedChangeTab1Button:(id)sender {
+- (IBAction)pushedChangeTab1Button:(id)sender
+{
     self.tabBarController.selectedIndex = 0;
 }
 
