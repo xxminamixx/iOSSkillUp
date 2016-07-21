@@ -9,10 +9,12 @@
 #import "Tab1ViewController.h"
 #import "FMDatabase.h"
 
-@interface Tab1ViewController ()
+@interface Tab1ViewController () <UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *idTextField;
+@property (weak, nonatomic) IBOutlet UITextField *tableNameTextField;
+@property (weak, nonatomic) IBOutlet UIPickerView *selectTableNamePicker;
 
 - (IBAction)pushedChangeTab2Button:(id)sender;
 - (IBAction)pushedCreateTableButton:(id)sender;
@@ -30,6 +32,8 @@
 {
     [super viewDidLoad];
     self.alreadyDB = NO;
+    self.selectTableNamePicker.delegate = self;
+    self.selectTableNamePicker.dataSource = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,7 +48,6 @@
 
 - (IBAction)pushedCreateTableButton:(id)sender
 {
-  
     FMDatabase *db = [self connectingDB];
 
     //　テーブル作成
@@ -102,6 +105,39 @@
     NSString *dir = [paths objectAtIndex:0];
     FMDatabase *db = [FMDatabase databaseWithPath: [dir stringByAppendingPathComponent:@"test.db"]];
     return db;
+}
+
+- (void) selectTableList
+{
+    FMDatabase *db = [self connectingDB];
+    [db open];
+    FMResultSet *rs = [db executeQuery:@"SHOW TABLES"];
+    
+    while ([rs next]){
+        NSInteger identifer = [rs intForColumn:@"id"];
+        NSString *name = [rs stringForColumn:@"name"];
+        NSLog(@"%ld", identifer);
+        NSLog(@"%@", name);
+    }
+    
+    [rs close];
+    [db close];
+}
+
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView*)pickerView
+{
+    return 1;
+}
+
+-(NSInteger)pickerView:(UIPickerView*)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return 5;
+}
+
+-(NSString*)pickerView:(UIPickerView*)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    
+       return [NSString stringWithFormat:@"%ld", row];
+    
 }
 
 @end
