@@ -18,6 +18,7 @@
 - (IBAction)pushedCreateTableButton:(id)sender;
 - (IBAction)pushedInsertButton:(id)sender;
 - (IBAction)pushedSelectButton:(id)sender;
+- (IBAction)pushedDropButton:(id)sender;
 
 @property BOOL alreadyDB;
 
@@ -43,18 +44,9 @@
 
 - (IBAction)pushedCreateTableButton:(id)sender
 {
-    //　初回だけデータベースを作る
-    FMDatabase *db;
-    if (self.alreadyDB == NO) {
-        NSArray *paths = NSSearchPathForDirectoriesInDomains( NSDocumentDirectory, NSUserDomainMask, YES );
-        NSString *dir = [paths objectAtIndex:0];
-        db = [FMDatabase databaseWithPath:[dir stringByAppendingPathComponent:@"test.db"]];
-        
-        [db open];
-        [db close];
-        self.alreadyDB = YES;
-    }
-    
+  
+    FMDatabase *db = [self connectingDB];
+
     //　テーブル作成
     NSString *sql = @"CREATE TABLE TEST_TABLE (name TEXT, id INTEGER);";
     
@@ -65,10 +57,8 @@
 
 - (IBAction)pushedInsertButton:(id)sender
 {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains( NSDocumentDirectory, NSUserDomainMask, YES );
-    NSString *dir = [paths objectAtIndex:0];
-    FMDatabase *db = [FMDatabase databaseWithPath:[dir stringByAppendingPathComponent:@"test.db"]];
-
+    FMDatabase *db = [self connectingDB];
+    
     NSMutableString *sql = [NSMutableString string];
     [sql appendString:[NSString stringWithFormat:@"INSERT INTO TEST_TABLE (name, id) VALUES ('%@', %@)", self.nameTextField.text, self.idTextField.text]];
     
@@ -79,21 +69,39 @@
 
 - (IBAction)pushedSelectButton:(id)sender
 {
+    FMDatabase *db = [self connectingDB];
+    
+    if ([db executeQuery:@"select name,id from TEST_TABLE"]){
+        [db open];
+        FMResultSet *rs = [db executeQuery:@"select name,id from TEST_TABLE"];
+       
+            while ([rs next]){
+               NSInteger identifer = [rs intForColumn:@"id"];
+               NSString *name = [rs stringForColumn:@"name"];
+               NSLog(@"%ld", identifer);
+               NSLog(@"%@", name);
+           }
+        [db close];
+        [rs close];
+    }
+}
+
+- (IBAction)pushedDropButton:(id)sender {
+    FMDatabase *db = [self connectingDB];
+    if ([db executeQuery:@"select name,id from TEST_TABLE"]) {
+        NSString *sql = @"DROP TABLE TEST_TABLE";
+        [db open];
+        [db executeUpdate:sql];
+        [db close];
+    }
+}
+
+-(FMDatabase *)connectingDB
+{
     NSArray *paths = NSSearchPathForDirectoriesInDomains( NSDocumentDirectory, NSUserDomainMask, YES );
     NSString *dir = [paths objectAtIndex:0];
     FMDatabase *db = [FMDatabase databaseWithPath: [dir stringByAppendingPathComponent:@"test.db"]];
-    
-    [db open];
-    FMResultSet *rs = [db executeQuery:@"select name,id from TEST_TABLE"];
-   
-        while ([rs next]){
-           NSInteger identifer = [rs intForColumn:@"id"];
-           NSString *name = [rs stringForColumn:@"name"];
-           NSLog(@"%ld", identifer);
-           NSLog(@"%@", name);
-       }
-    [db close];
-    [rs close];
+    return db;
 }
 
 @end
