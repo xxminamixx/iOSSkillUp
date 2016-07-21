@@ -11,6 +11,7 @@
 @interface Tab1ViewController ()
 
 - (IBAction)pushedChangeTab2Button:(id)sender;
+
 @end
 
 @implementation Tab1ViewController
@@ -28,4 +29,5 @@
 - (IBAction)pushedChangeTab2Button:(id)sender {
     self.tabBarController.selectedIndex = 1;
 }
+
 @end

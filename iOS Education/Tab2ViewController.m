@@ -9,6 +9,7 @@
 #import "Tab2ViewController.h"
 
 @interface Tab2ViewController ()
+
 - (IBAction)pushedChangeTab1Button:(id)sender;
 
 @end
@@ -28,4 +29,5 @@
 - (IBAction)pushedChangeTab1Button:(id)sender {
     self.tabBarController.selectedIndex = 0;
 }
+
 @end
