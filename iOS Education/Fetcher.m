@@ -11,6 +11,9 @@
 #import "Utils.h"
 #import "DDXMLElement+Dictionary.h"
 #import "ActerRelationshipEntity.h"
+#import "GTMHTTPFetcher.h"
+#import "GTMMIMEDocument.h"
+#import "GTMHTTPFetcherLogging.h"
 
 // 土偶と関連する記事のURL
 NSString *acterStr = @"https://ja.wikipedia.org/w/api.php?format=xml&action=query&list=search&srsearch=%E3%82%A8%E3%83%9E%E3%83%BB%E3%83%AF%E3%83%88%E3%82%BD%E3%83%B3&srlimit=";
@@ -96,4 +99,14 @@ NSString *acterStr = @"https://ja.wikipedia.org/w/api.php?format=xml&action=quer
     return resultArray;
 }
 
+- (void)http{
+    GTMHTTPFetcher* fetcher = [GTMHTTPFetcher fetcherWithURLString:@"http://www.google.com"];
+    [fetcher beginFetchWithDelegate:self
+                  didFinishSelector:@selector(requestDidComplete)];
+}
+
+- (void)requestDidComplete
+{
+    NSLog(@"Completed");
+}
 @end
