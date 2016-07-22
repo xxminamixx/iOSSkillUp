@@ -5,6 +5,7 @@
 
 target 'iOS Education' do
  pod 'KissXML'
+ pod ‘GTMHTTPFetcher’
 end
 
 target 'iOS EducationUITests' do
