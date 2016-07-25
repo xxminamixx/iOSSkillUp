@@ -28,6 +28,7 @@
 - (IBAction)pushedSegueButton:(id)sender;
 - (IBAction)pushedSendAsynchronousButton:(id)sender;
 - (IBAction)pushedModalButton:(id)sender;
+- (IBAction)pushedCollectionButton:(id)sender;
 
 @end
 
@@ -185,6 +186,10 @@
 
 - (IBAction)pushedModalButton:(id)sender {
     [self showModalView];
+}
+
+- (IBAction)pushedCollectionButton:(id)sender {
+    
 }
 
 
