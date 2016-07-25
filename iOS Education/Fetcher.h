@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DDXMLDocument.h"
 
 // コントローラに配列を受け渡す
 typedef void (^completedBlocks)(NSMutableArray *);
@@ -17,6 +16,6 @@ typedef void (^completedBlocks)(NSMutableArray *);
 - (void) sendSynchronousFoodFetcher;
 - (void) sendAsynchronousFoodFetcher;
 - (void) wikipediaAPIFetcher:(completedBlocks)blocks;
-- (NSMutableArray *)acterRelationRequest:(NSInteger)num;
+- (void) GTMsessionFetcher;
 
 @end

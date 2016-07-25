@@ -142,6 +142,9 @@
     swipeRightGesture.direction = UISwipeGestureRecognizerDirectionRight;
     [self.view addGestureRecognizer:swipeRightGesture];
     
+    Fetcher *fetcher = [Fetcher new];
+    [fetcher GTMsessionFetcher];
+    
 }
 
 - (void)didReceiveMemoryWarning {

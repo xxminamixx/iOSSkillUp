@@ -4,8 +4,7 @@
 # use_frameworks!
 
 target 'iOS Education' do
- pod 'KissXML'
- pod ‘GTMHTTPFetcher’
+ pod ‘GTMSessionFetcher’
 end
 
 target 'iOS EducationUITests' do

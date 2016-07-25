@@ -49,10 +49,6 @@ NSInteger ReadFurtherNumber = 10; //更読みを押した回数をカウント
     UINib *nib = [UINib nibWithNibName:@"CustomTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"customCell" ];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    
-    Fetcher *fetcher = [Fetcher new];
-    self.arrayForCellText = [fetcher acterRelationRequest:ReadFurtherNumber];
-//    [self setArrayValue];
 }
 
 - (void)didReceiveMemoryWarning

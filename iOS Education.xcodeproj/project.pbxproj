@@ -12,7 +12,6 @@
 		E911CDD21D37208800E34260 /* Print-50.png in Resources */ = {isa = PBXBuildFile; fileRef = E911CDD11D37208800E34260 /* Print-50.png */; };
 		E91E41491D3F0F21000EE05B /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E91E41471D3F0F21000EE05B /* CustomTableViewCell.m */; };
 		E91E414A1D3F0F21000EE05B /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E91E41481D3F0F21000EE05B /* CustomTableViewCell.xib */; };
-		E91E414D1D3F6BC8000EE05B /* DDXMLElement+Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = E91E414C1D3F6BC8000EE05B /* DDXMLElement+Dictionary.m */; };
 		E91E41501D3F6F93000EE05B /* ActerRelationshipEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E91E414F1D3F6F93000EE05B /* ActerRelationshipEntity.m */; };
 		E93B9A481D386CBB003E1963 /* Fetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B9A471D386CBB003E1963 /* Fetcher.m */; };
 		E974AB8D1D3DE62F00346C2F /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = E974AB8C1D3DE62F00346C2F /* Human.m */; };
@@ -61,8 +60,6 @@
 		E91E41461D3F0F21000EE05B /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		E91E41471D3F0F21000EE05B /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		E91E41481D3F0F21000EE05B /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
-		E91E414B1D3F6BC8000EE05B /* DDXMLElement+Dictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DDXMLElement+Dictionary.h"; path = "../../../RECRUIT API/HotpepperAPIApp/HotpepperAPIApp/DDXMLElement+Dictionary.h"; sourceTree = "<group>"; };
-		E91E414C1D3F6BC8000EE05B /* DDXMLElement+Dictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DDXMLElement+Dictionary.m"; path = "../../../RECRUIT API/HotpepperAPIApp/HotpepperAPIApp/DDXMLElement+Dictionary.m"; sourceTree = "<group>"; };
 		E91E414E1D3F6F93000EE05B /* ActerRelationshipEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActerRelationshipEntity.h; sourceTree = "<group>"; };
 		E91E414F1D3F6F93000EE05B /* ActerRelationshipEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActerRelationshipEntity.m; sourceTree = "<group>"; };
 		E93B9A461D386CBB003E1963 /* Fetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fetcher.h; sourceTree = "<group>"; };
@@ -112,6 +109,8 @@
 		E9EC0E901D36246A008E5516 /* Reak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reak.m; sourceTree = "<group>"; };
 		E9EC0E921D3635E8008E5516 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
 		E9EC0E931D3635E8008E5516 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		E9F6C4A01D45FFE5007E748B /* libGTMSessionFetcher.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGTMSessionFetcher.a; path = "../../../Library/Developer/Xcode/DerivedData/iOS_Education-djmybectuqvpurdhucqqzvlufxzz/Build/Products/Debug-iphonesimulator/libGTMSessionFetcher.a"; sourceTree = "<group>"; };
+		E9F6C4A21D46003B007E748B /* libGTMHTTPFetcher.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGTMHTTPFetcher.a; path = "../../../Library/Developer/Xcode/DerivedData/iOS_Education-djmybectuqvpurdhucqqzvlufxzz/Build/Products/Debug-iphonesimulator/libGTMHTTPFetcher.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +145,8 @@
 		92DCF458D50DB141D2364FC0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E9F6C4A21D46003B007E748B /* libGTMHTTPFetcher.a */,
+				E9F6C4A01D45FFE5007E748B /* libGTMSessionFetcher.a */,
 				E989A12E1D409E95006A98F4 /* libsqlite3.0.tbd */,
 				8F05E485AAB7D9D5359A22A0 /* libPods-iOS Education.a */,
 			);
@@ -204,8 +205,6 @@
 			isa = PBXGroup;
 			children = (
 				E989A1301D409EFC006A98F4 /* FMDB */,
-				E91E414B1D3F6BC8000EE05B /* DDXMLElement+Dictionary.h */,
-				E91E414C1D3F6BC8000EE05B /* DDXMLElement+Dictionary.m */,
 				E93B9A461D386CBB003E1963 /* Fetcher.h */,
 				E93B9A471D386CBB003E1963 /* Fetcher.m */,
 				E9C191301D38A0FC00F112FB /* WikipediaEntity.h */,
@@ -450,7 +449,6 @@
 				E9EC0E881D3602AB008E5516 /* Square.m in Sources */,
 				E989A13D1D409F0F006A98F4 /* FMDatabasePool.m in Sources */,
 				E91E41501D3F6F93000EE05B /* ActerRelationshipEntity.m in Sources */,
-				E91E414D1D3F6BC8000EE05B /* DDXMLElement+Dictionary.m in Sources */,
 				E9C191351D38AEC100F112FB /* Utils.m in Sources */,
 				E93B9A481D386CBB003E1963 /* Fetcher.m in Sources */,
 				E974AB8D1D3DE62F00346C2F /* Human.m in Sources */,
