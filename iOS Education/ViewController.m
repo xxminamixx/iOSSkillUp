@@ -234,7 +234,7 @@
     if ([self.textField.text isEqualToString:@"a"]) {
         [self performSegueWithIdentifier:@"Segue2" sender:self];
     } else {
-        [self performSegueWithIdentifier:@"Segue1" sender:self];
+        [self performSegueWithIdentifier:@"toTableView" sender:self];
     }
     
 }

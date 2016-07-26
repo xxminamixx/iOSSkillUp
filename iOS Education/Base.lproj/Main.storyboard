@@ -162,7 +162,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell" id="2s1-X2-E1V">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="64" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -322,6 +322,7 @@
                         <outlet property="textField" destination="yu6-AB-225" id="COq-ul-x3r"/>
                         <segue destination="c0z-Ps-Oxu" kind="push" identifier="Segue2" id="EcN-lx-lCA"/>
                         <segue destination="9fW-OS-dA8" kind="push" identifier="Segue1" id="cHB-yV-Vrv"/>
+                        <segue destination="AHR-H7-BJx" kind="push" identifier="toTableView" id="GQn-Cl-Beg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -421,7 +422,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="noe-v4-1c6" id="lVR-dE-v2g"/>
-                        <segue destination="BYZ-38-t0r" kind="modal" identifier="toViewController" id="Kmy-XA-5bB"/>
                         <segue destination="c0z-Ps-Oxu" kind="modal" identifier="toModalViewController" id="9zd-br-F5I"/>
                     </connections>
                 </viewController>
@@ -451,6 +451,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="EcN-lx-lCA"/>
-        <segue reference="Kmy-XA-5bB"/>
+        <segue reference="GQn-Cl-Beg"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -31,6 +31,7 @@ NSInteger ReadFurtherNumber = 10; //更読みを押した回数をカウント
 @interface SegueViewController ()
 
 @property NSMutableArray *arrayForCellText;
+@property CustomTableViewCell *cellForHeightCalc;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -48,6 +49,7 @@ NSInteger ReadFurtherNumber = 10; //更読みを押した回数をカウント
     
     UINib *nib = [UINib nibWithNibName:@"CustomTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"customCell" ];
+    self.cellForHeightCalc = [self.tableView dequeueReusableCellWithIdentifier:@"Cell"];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 
@@ -74,6 +76,8 @@ NSInteger ReadFurtherNumber = 10; //更読みを押した回数をカウント
         cell = [[CustomTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"customCell"];
     }
     
+    [self setArrayValue];
+    
     if (indexPath.row < arrayCount) {
         [cell setTextToLabel: self.arrayForCellText[indexPath.row]];
     } else {
@@ -84,13 +88,31 @@ NSInteger ReadFurtherNumber = 10; //更読みを押した回数をカウント
     return cell;
 }
 
+
+-(void)setupCell:(CustomTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
+    [self readFurther];
+}
+
 #pragma mark - UITableView DataSource
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CustomTableViewCell *cell = (CustomTableViewCell*)[self tableView:self.tableView cellForRowAtIndexPath:indexPath];
+    
+    return cell.height;
+}
+
 //-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 //{
-//    CustomTableViewCell *cell = (CustomTableViewCell*)[self tableView:self.tableView cellForRowAtIndexPath:indexPath];
+//    [self setupCell:self.cellForHeightCalc atIndexPath:indexPath];
 //    
-//    return cell.height;
+//    [self.cellForHeightCalc.contentView setNeedsLayout];
+//    [self.cellForHeightCalc.contentView layoutIfNeeded];
+//    
+//    CGSize size = [self.cellForHeightCalc.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+//    return size.height+1;
 //}
+
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
