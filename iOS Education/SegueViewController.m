@@ -24,7 +24,7 @@ NSString * const kLongName120 = @"１２３４５６７８９８７６５４３�
 NSString * const kLongName130 = @"１２３４５６７８９８７６５４３２１１２３４５６７８９８７６５４３２１１２３４２３１２３４５６７８９００９８７６５４３２１１２３４５６７０２１９８７６５４３２１０１２３４５６７８９０１２３４６７８９０５１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０★";
 NSString * const kLongName140 = @"１２３４５６７８９８７６５４３２１１２３４５６７８９８７６５４３２１１２３４２３１２３４５６７８９００９８７６５４３２１１２３４５６７０２１９８７６５４３２１０１２３４５６７８９０１２３４６７８９０５１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０★";
 
-const NSInteger arrayCount = 11; // 表示する配列の要素が11つのため
+NSInteger arrayCount = 11; // 表示する配列の要素が11つのため
 
 NSInteger ReadFurtherNumber = 10; //更読みを押した回数をカウント
 
@@ -51,6 +51,22 @@ NSInteger ReadFurtherNumber = 10; //更読みを押した回数をカウント
     [self.tableView registerNib:nib forCellReuseIdentifier:@"customCell" ];
     self.cellForHeightCalc = [self.tableView dequeueReusableCellWithIdentifier:@"Cell"];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    //独自で作成したボタンに編集機能を持たせる
+//    UIBarButtonItem *editBtn = [[UIBarButtonItem alloc]
+//                                initWithTitle:@"編集"
+//                                style:UIBarButtonItemStylePlain
+//                                target:self
+//                                action:@selector(pushedEditButton)];
+//    
+//
+//    self.navigationItem.rightBarButtonItem = editBtn;
+    
+    //　用意されている編集ボタンをセット
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+    [self setArrayValue];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,8 +91,6 @@ NSInteger ReadFurtherNumber = 10; //更読みを押した回数をカウント
     if (cell == nil) {
         cell = [[CustomTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"customCell"];
     }
-    
-    [self setArrayValue];
     
     if (indexPath.row < arrayCount) {
         [cell setTextToLabel: self.arrayForCellText[indexPath.row]];
@@ -169,6 +183,39 @@ NSInteger ReadFurtherNumber = 10; //更読みを押した回数をカウント
     [array addObject:kLongName50];
     [array addObject:kLongName40];
     self.arrayForCellText = array;
+}
+
+- (void)pushedEditButton
+{
+    self.tableView.editing = YES;
+}
+
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+    [super setEditing:editing animated:animated];
+    [self.tableView setEditing:editing animated:animated];
+}
+
+// セルの編集可能状態を管理
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //　配列の最後のセルを編集不可に設定
+     if (indexPath.row < arrayCount) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+-(void)tableView:(UITableView*)tableView commitEditingStyle:(UITableViewCellEditingStyle) editingStyle forRowAtIndexPath:(NSIndexPath*)indexPath
+{
+    if(editingStyle == UITableViewCellEditingStyleDelete){
+        // Delete時の処理をここに書く
+        [self.arrayForCellText removeObjectAtIndex:indexPath.row];
+        arrayCount--;
+        [self.tableView reloadData];
+    }else if(editingStyle == UITableViewCellEditingStyleInsert){
+        // Insert時の処理をここに書く
+    }
 }
 
 @end
