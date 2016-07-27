@@ -5,6 +5,7 @@
 
 target 'iOS Education' do
  pod ‘GTMSessionFetcher’
+ pod ‘LUKeychainAccess’
 end
 
 target 'iOS EducationUITests' do

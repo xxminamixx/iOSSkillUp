@@ -145,6 +145,77 @@
     Fetcher *fetcher = [Fetcher new];
     [fetcher GTMsessionFetcher];
     
+//    // キューの作成
+//    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
+//    // 実行内容
+//    dispatch_async(queue, ^{
+//        NSLog(@"優先度:高");
+//    });
+    
+    // dispatch_get_global_queueで優先度別のキューを取得
+    // dispatch_syncは同期的に実行され他の処理が止まる
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        NSLog(@"バッググラウンド");
+    });
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSLog(@"優先度:低");
+    });
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSLog(@"優先度:中");
+    });
+    
+    // メインスレッドで実行
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"メインスレッドで実行");
+    });
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        NSLog(@"優先度:高");
+    });
+    
+    // メインスレッドで実行
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"メインスレッドで実行");
+    });
+    
+    
+    // 条件つきコンパイル
+    NSInteger num = 1;
+    
+// デバッグする箇所に条件を付けるなど
+#define DEBUG 1
+    
+#if 0
+    num = 1;
+#elif num > 1
+    NSLog(@"numの値は1より大きいです");
+#elif num == 1
+    NSLog(@"numは1です");
+#elif num < 1
+    NSLog(@"numの値は1より小さいです");
+#else
+    NSLog("どの条件にも当てはまりません");
+#endif
+    
+#ifdef DEBUG
+    NSLog(@"デバッグの時だけ出力されます");
+#else
+#endif
+
+//#define HOGE
+#ifdef DEBUG
+    NSLog(@"定義済みのとき出力されます");
+#else
+    NSLog(@"未定義のとき出力されます");
+#endif
+    
+#ifndef DEBUG
+     NSLog(@"未定義のとき出力されます");
+#else
+    NSLog(@"定義済みのとき出力されます");
+#endif
 }
 
 - (void)didReceiveMemoryWarning {

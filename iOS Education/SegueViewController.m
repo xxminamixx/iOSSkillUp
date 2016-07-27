@@ -127,6 +127,16 @@ NSString * const kLongName140 = @"１２３４５６７８９８７６５４３�
     }
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [NSString stringWithFormat:@"Header"];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
+{
+    return [NSString stringWithFormat:@"Footer"];
+}
+
 //- (void)scrollViewDidScroll:(UIScrollView *)scrollView
 //{
 //    //一番下までスクロールしたかどうか

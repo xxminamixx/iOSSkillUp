@@ -1,5 +1,5 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/GTMSessionFetcher"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/GTMSessionFetcher"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"GTMSessionFetcher" -framework "Security"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/GTMSessionFetcher" "${PODS_ROOT}/Headers/Public/LUKeychainAccess"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/GTMSessionFetcher" -isystem "${PODS_ROOT}/Headers/Public/LUKeychainAccess"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"GTMSessionFetcher" -l"LUKeychainAccess" -framework "Security"
 PODS_ROOT = ${SRCROOT}/Pods

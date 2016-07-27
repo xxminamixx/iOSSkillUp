@@ -4,11 +4,14 @@ PODS:
   - GTMSessionFetcher/Core (1.1.4)
   - GTMSessionFetcher/Full (1.1.4):
     - GTMSessionFetcher/Core (= 1.1.4)
+  - LUKeychainAccess (1.2.5)
 
 DEPENDENCIES:
   - GTMSessionFetcher
+  - LUKeychainAccess
 
 SPEC CHECKSUMS:
   GTMSessionFetcher: 174bc61d5238f81f9ddb807b0b0170420f67de85
+  LUKeychainAccess: d22fc00b33ad92c7532962b86daa94c14b85ecbe
 
 COCOAPODS: 0.39.0
