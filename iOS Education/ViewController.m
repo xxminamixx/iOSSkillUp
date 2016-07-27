@@ -13,8 +13,10 @@
 #import "Fetcher.h"
 #import "WikipediaEntity.h"
 #import "Human.h"
+#import "LUKeychainAccess.h"
 
 //NSString * const kToViewController = @"ViewController";
+NSString * const kKeyDic = @"KEY_CHAIN_SHARING_KEY_DIC";
 
 @interface ViewController ()
 
@@ -216,6 +218,22 @@
 #else
     NSLog(@"定義済みのとき出力されます");
 #endif
+    
+    NSDictionary *userDic = @{
+                              @"userName":@"mike",
+                              @"password":@"123456"
+                              };
+
+     // NSDictionaryを保存
+    [[LUKeychainAccess standardKeychainAccess] setObject:userDic forKey:kKeyDic];
+    
+    // 取得
+    userDic = [[LUKeychainAccess standardKeychainAccess] objectForKey:kKeyDic];
+    
+#ifdef DEBUG
+    NSLog(@"%@",userDic);
+#endif
+
 }
 
 - (void)didReceiveMemoryWarning {
