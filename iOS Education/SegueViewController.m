@@ -24,10 +24,6 @@ NSString * const kLongName120 = @"１２３４５６７８９８７６５４３�
 NSString * const kLongName130 = @"１２３４５６７８９８７６５４３２１１２３４５６７８９８７６５４３２１１２３４２３１２３４５６７８９００９８７６５４３２１１２３４５６７０２１９８７６５４３２１０１２３４５６７８９０１２３４６７８９０５１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０★";
 NSString * const kLongName140 = @"１２３４５６７８９８７６５４３２１１２３４５６７８９８７６５４３２１１２３４２３１２３４５６７８９００９８７６５４３２１１２３４５６７０２１９８７６５４３２１０１２３４５６７８９０１２３４６７８９０５１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０★";
 
-NSInteger arrayCount = 11; // 表示する配列の要素が11つのため
-
-NSInteger ReadFurtherNumber = 10; //更読みを押した回数をカウント
-
 @interface SegueViewController ()
 
 @property NSMutableArray *arrayForCellText;
@@ -52,16 +48,6 @@ NSInteger ReadFurtherNumber = 10; //更読みを押した回数をカウント
     self.cellForHeightCalc = [self.tableView dequeueReusableCellWithIdentifier:@"Cell"];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
-    //独自で作成したボタンに編集機能を持たせる
-//    UIBarButtonItem *editBtn = [[UIBarButtonItem alloc]
-//                                initWithTitle:@"編集"
-//                                style:UIBarButtonItemStylePlain
-//                                target:self
-//                                action:@selector(pushedEditButton)];
-//    
-//
-//    self.navigationItem.rightBarButtonItem = editBtn;
-    
     //　用意されている編集ボタンをセット
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
@@ -82,7 +68,7 @@ NSInteger ReadFurtherNumber = 10; //更読みを押した回数をカウント
 #pragma mark - UITableView Delegate
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return arrayCount + 1;
+    return self.arrayForCellText.count + 1;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -92,7 +78,7 @@ NSInteger ReadFurtherNumber = 10; //更読みを押した回数をカウント
         cell = [[CustomTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"customCell"];
     }
     
-    if (indexPath.row < arrayCount) {
+    if (indexPath.row < self.arrayForCellText.count) {
         [cell setTextToLabel: self.arrayForCellText[indexPath.row]];
     } else {
         // 最下部のセルの設定
@@ -130,11 +116,11 @@ NSInteger ReadFurtherNumber = 10; //更読みを押した回数をカウント
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row < arrayCount) {
+    if (indexPath.row < self.arrayForCellText.count) {
         // 通常のセルがタップされた処理
     } else {
         // さらに読み込む処理
-        ReadFurtherNumber += 10;
+        [self readFurther];
         
         [self.tableView reloadData];
         
@@ -185,11 +171,6 @@ NSInteger ReadFurtherNumber = 10; //更読みを押した回数をカウント
     self.arrayForCellText = array;
 }
 
-- (void)pushedEditButton
-{
-    self.tableView.editing = YES;
-}
-
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
     [super setEditing:editing animated:animated];
     [self.tableView setEditing:editing animated:animated];
@@ -199,7 +180,7 @@ NSInteger ReadFurtherNumber = 10; //更読みを押した回数をカウント
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //　配列の最後のセルを編集不可に設定
-     if (indexPath.row < arrayCount) {
+     if (indexPath.row < self.arrayForCellText.count) {
         return YES;
     } else {
         return NO;
@@ -209,12 +190,10 @@ NSInteger ReadFurtherNumber = 10; //更読みを押した回数をカウント
 -(void)tableView:(UITableView*)tableView commitEditingStyle:(UITableViewCellEditingStyle) editingStyle forRowAtIndexPath:(NSIndexPath*)indexPath
 {
     if(editingStyle == UITableViewCellEditingStyleDelete){
-        // Delete時の処理をここに書く
         [self.arrayForCellText removeObjectAtIndex:indexPath.row];
-        arrayCount--;
         [self.tableView reloadData];
     }else if(editingStyle == UITableViewCellEditingStyleInsert){
-        // Insert時の処理をここに書く
+    
     }
 }
 
