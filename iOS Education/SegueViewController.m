@@ -156,19 +156,17 @@ NSString * const kLongName140 = @"１２３４５６７８９８７６５４３�
 
 - (void)readFurther
 {
-    NSMutableArray *array = [NSMutableArray array];
-    [array addObject:kLongName140];
-    [array addObject:kLongName130];
-    [array addObject:kLongName120];
-    [array addObject:kLongName110];
-    [array addObject:kLongName100];
-    [array addObject:kLongName90];
-    [array addObject:kLongName80];
-    [array addObject:kLongName70];
-    [array addObject:kLongName60];
-    [array addObject:kLongName50];
-    [array addObject:kLongName40];
-    self.arrayForCellText = array;
+    [self.arrayForCellText addObject:kLongName140];
+    [self.arrayForCellText addObject:kLongName130];
+    [self.arrayForCellText addObject:kLongName120];
+    [self.arrayForCellText addObject:kLongName110];
+    [self.arrayForCellText addObject:kLongName100];
+    [self.arrayForCellText addObject:kLongName90];
+    [self.arrayForCellText addObject:kLongName80];
+    [self.arrayForCellText addObject:kLongName70];
+    [self.arrayForCellText addObject:kLongName60];
+    [self.arrayForCellText addObject:kLongName50];
+    [self.arrayForCellText addObject:kLongName40];
 }
 
 
