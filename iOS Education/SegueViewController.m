@@ -171,6 +171,8 @@ NSString * const kLongName140 = @"１２３４５６７８９８７６５４３�
     self.arrayForCellText = array;
 }
 
+
+#pragma mark - TableView Deleagte For Editing
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
     [super setEditing:editing animated:animated];
     [self.tableView setEditing:editing animated:animated];
