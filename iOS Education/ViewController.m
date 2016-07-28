@@ -234,6 +234,8 @@ NSString * const kKeyDic = @"KEY_CHAIN_SHARING_KEY_DIC";
     NSLog(@"%@",userDic);
 #endif
 
+    self.viewControllerProperty = @"可視性のテスト";
+    NSLog(@"%@", self.viewControllerProperty);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -349,3 +351,15 @@ NSString * const kKeyDic = @"KEY_CHAIN_SHARING_KEY_DIC";
 }
 
 @end
+//
+//@implementation ModalViewController
+//
+//- (void)viewDidLoad
+//{
+////    self.viewControllerProperty = @"可視性のテスト";
+////    NSLog(@"%@", self.viewControllerProperty);
+//
+//}
+//
+//@end
+//

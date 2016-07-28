@@ -12,5 +12,7 @@
 
 @interface ViewController : UIViewController
 
+@property NSString *viewControllerProperty;
+
 @end
 
