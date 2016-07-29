@@ -14,11 +14,25 @@
 #import "WikipediaEntity.h"
 #import "Human.h"
 #import "LUKeychainAccess.h"
+#import "AlertViewWithBlock.h"
 
 //NSString * const kToViewController = @"ViewController";
 NSString * const kKeyDic = @"KEY_CHAIN_SHARING_KEY_DIC";
 
 @interface ViewController ()
+
+typedef void (^UIAlertViewBlock) (UIAlertView *alertView);
+typedef void (^UIAlertViewCompletionBlock) (UIAlertView *alertView, NSInteger buttonIndex);
+
+@property (copy, nonatomic) UIAlertViewCompletionBlock tapBlock;
+@property (copy, nonatomic) UIAlertViewCompletionBlock willDismissBlock;
+@property (copy, nonatomic) UIAlertViewCompletionBlock didDismissBlock;
+
+@property (copy, nonatomic) UIAlertViewBlock willPresentBlock;
+@property (copy, nonatomic) UIAlertViewBlock didPresentBlock;
+@property (copy, nonatomic) UIAlertViewBlock cancelBlock;
+
+@property (copy, nonatomic) BOOL(^shouldEnableFirstOtherButtonBlock)(UIAlertView *alertView);
 
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -237,6 +251,7 @@ NSString * const kKeyDic = @"KEY_CHAIN_SHARING_KEY_DIC";
 
     self.viewControllerProperty = @"可視性のテスト";
     NSLog(@"%@", self.viewControllerProperty);
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -290,10 +305,14 @@ NSString * const kKeyDic = @"KEY_CHAIN_SHARING_KEY_DIC";
 }
 
 - (IBAction)pushedAleartViewButton:(id)sender {
-    UIAlertView *alert =
-    [[UIAlertView alloc] initWithTitle:@"確認" message:@"削除してもよろしいですか？"
-                              delegate:self cancelButtonTitle:@"いいえ" otherButtonTitles:@"はい", nil];
+    
+    AlertViewWithBlock* alert = [[AlertViewWithBlock alloc] initWithTitle:@"Blocksで実装" message:@"DelegateをBlocksで実装しました" cancelHandler:^(UIAlertView* alertView){
+        NSLog(@"Cancel");
+    } buttonHandler:^(UIAlertView* alertView, NSInteger buttonIndex){
+        NSLog(@"押したボタンは %ld 番目のボタンです",buttonIndex);
+    } buttonTitles:@"キャンセル",@"OK", nil];
     [alert show];
+
 }
 
 // アラートのボタンが押された時に呼ばれるデリゲート

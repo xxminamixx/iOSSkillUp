@@ -14,6 +14,7 @@
 		E91E414A1D3F0F21000EE05B /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E91E41481D3F0F21000EE05B /* CustomTableViewCell.xib */; };
 		E91E41501D3F6F93000EE05B /* ActerRelationshipEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E91E414F1D3F6F93000EE05B /* ActerRelationshipEntity.m */; };
 		E93B9A481D386CBB003E1963 /* Fetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E93B9A471D386CBB003E1963 /* Fetcher.m */; };
+		E94F09B21D4B1733007ABDFC /* AlertViewWithBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = E94F09B11D4B1733007ABDFC /* AlertViewWithBlock.m */; };
 		E974AB8D1D3DE62F00346C2F /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = E974AB8C1D3DE62F00346C2F /* Human.m */; };
 		E974AB901D3E044000346C2F /* SegueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E974AB8F1D3E044000346C2F /* SegueViewController.m */; };
 		E989A12A1D40850D006A98F4 /* Tab1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E989A1291D40850D006A98F4 /* Tab1ViewController.m */; };
@@ -65,6 +66,8 @@
 		E93B08771D48A3790093D968 /* iOS Education.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "iOS Education.entitlements"; sourceTree = "<group>"; };
 		E93B9A461D386CBB003E1963 /* Fetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fetcher.h; sourceTree = "<group>"; };
 		E93B9A471D386CBB003E1963 /* Fetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fetcher.m; sourceTree = "<group>"; };
+		E94F09B01D4B1733007ABDFC /* AlertViewWithBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewWithBlock.h; sourceTree = "<group>"; };
+		E94F09B11D4B1733007ABDFC /* AlertViewWithBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewWithBlock.m; sourceTree = "<group>"; };
 		E974AB8B1D3DE62F00346C2F /* Human.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Human.h; sourceTree = "<group>"; };
 		E974AB8C1D3DE62F00346C2F /* Human.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Human.m; sourceTree = "<group>"; };
 		E974AB8E1D3E044000346C2F /* SegueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegueViewController.h; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 		E911CDCE1D371FEE00E34260 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E94F09B01D4B1733007ABDFC /* AlertViewWithBlock.h */,
+				E94F09B11D4B1733007ABDFC /* AlertViewWithBlock.m */,
 				E9EC0E8F1D36246A008E5516 /* Reak.h */,
 				E9EC0E901D36246A008E5516 /* Reak.m */,
 				E9EC0E831D36020F008E5516 /* Rectangle.h */,
@@ -452,6 +457,7 @@
 				E90BCD1F1D45EC8E008193F6 /* SampleCollectionViewController.m in Sources */,
 				E989A12A1D40850D006A98F4 /* Tab1ViewController.m in Sources */,
 				E989A13B1D409F0F006A98F4 /* FMDatabase.m in Sources */,
+				E94F09B21D4B1733007ABDFC /* AlertViewWithBlock.m in Sources */,
 				E974AB901D3E044000346C2F /* SegueViewController.m in Sources */,
 				E9EC0E881D3602AB008E5516 /* Square.m in Sources */,
 				E989A13D1D409F0F006A98F4 /* FMDatabasePool.m in Sources */,

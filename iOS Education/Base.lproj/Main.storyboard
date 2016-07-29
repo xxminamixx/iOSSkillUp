@@ -293,7 +293,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kW4-1W-jWF">
-                                <rect key="frame" x="137" y="187" width="105" height="30"/>
+                                <rect key="frame" x="113" y="187" width="143" height="30"/>
                                 <state key="normal" title="ShowAleatView"/>
                                 <connections>
                                     <action selector="pushedAleartViewButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B0G-sv-qCA"/>
