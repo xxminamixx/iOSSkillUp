@@ -11,6 +11,8 @@
 @interface ViewController : UIViewController
 
 @property NSString *viewControllerProperty;
+@property NSString *alertViewNextText;
+@property NSString *alertViewBackText;
 
 @end
 

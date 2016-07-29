@@ -306,11 +306,32 @@ typedef void (^UIAlertViewCompletionBlock) (UIAlertView *alertView, NSInteger bu
 
 - (IBAction)pushedAleartViewButton:(id)sender {
     
+    __weak typeof(self) weakSelf = self;
+    self.alertViewNextText = @"進むボタンが押されました";
+    self.alertViewBackText = @"戻るボタンが押されました";
+    
     AlertViewWithBlock* alert = [[AlertViewWithBlock alloc] initWithTitle:@"Blocksで実装" message:@"DelegateをBlocksで実装しました" cancelHandler:^(UIAlertView* alertView){
-        NSLog(@"Cancel");
+        __strong typeof(self) strongSelf = weakSelf;
+        if (!strongSelf) return ;
+        else {
+            NSLog(@"Cancel");
+        }
     } buttonHandler:^(UIAlertView* alertView, NSInteger buttonIndex){
-        NSLog(@"押したボタンは %ld 番目のボタンです",buttonIndex);
-    } buttonTitles:@"キャンセル",@"OK", nil];
+        __strong typeof(self) strongSelf = weakSelf;
+        if (!strongSelf) return;
+        else {
+            switch (buttonIndex) {
+                case 0:
+                    NSLog(@"%@", self.alertViewBackText);
+                    break;
+                case 1:
+                    NSLog(@"%@", self.alertViewNextText);
+                    break;
+                default:
+                    break;
+            }
+        }
+    } buttonTitles:@"戻る",@"進む", nil];
     [alert show];
 
 }
