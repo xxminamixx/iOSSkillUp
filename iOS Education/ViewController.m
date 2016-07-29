@@ -46,6 +46,8 @@ typedef void (^UIAlertViewCompletionBlock) (UIAlertView *alertView, NSInteger bu
 - (IBAction)pushedModalButton:(id)sender;
 - (IBAction)pushedCollectionButton:(id)sender;
 - (IBAction)pushedAleartViewButton:(id)sender;
+- (IBAction)pushedSaveKeychain:(id)sender;
+- (IBAction)pushedLoadKeychain:(id)sender;
 
 @end
 
@@ -252,6 +254,28 @@ typedef void (^UIAlertViewCompletionBlock) (UIAlertView *alertView, NSInteger bu
     self.viewControllerProperty = @"可視性のテスト";
     NSLog(@"%@", self.viewControllerProperty);
     
+    // 保存したいtoken
+    NSString *tokenString = @"saveToken";
+    NSData *data = [tokenString dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSDictionary *query = @{
+                            (__bridge id)kSecClass      : (__bridge id)kSecClassGenericPassword,
+                            (__bridge id)kSecAttrAccount: @"Account",
+                            (__bridge id)kSecAttrService: @"APP_NAME",
+                            (__bridge id)kSecValueData  : data
+                            };
+    
+    OSStatus err = SecItemAdd((__bridge CFDictionaryRef)query, NULL);
+    
+    // success
+    if (err == errSecSuccess) {
+        NSLog(@"キーチェーンの保存が完了しました。");
+    }
+    // error
+    else {
+        NSLog(@"保存に失敗しました。");
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -334,6 +358,76 @@ typedef void (^UIAlertViewCompletionBlock) (UIAlertView *alertView, NSInteger bu
     } buttonTitles:@"戻る",@"進む", nil];
     [alert show];
 
+}
+
+- (IBAction)pushedSaveKeychain:(id)sender {
+    // 更新用のtoken
+    NSString *tokenStrinig = @"updateToken";
+    NSData *data = [tokenStrinig dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSDictionary *query = @{
+                            (__bridge id)kSecClass      : (__bridge id)kSecClassGenericPassword,
+                            (__bridge id)kSecAttrAccount: @"Account",
+                            (__bridge id)kSecAttrService: @"APP_NAME"
+                            };
+    
+    OSStatus err = SecItemCopyMatching((__bridge CFDictionaryRef)query, NULL);
+    
+    // success
+    if (err == errSecSuccess) {
+        //存在したら上書き処理
+        
+        // update
+        NSDictionary *attr = @{(__bridge id)kSecValueData           : data,
+                               (__bridge id)kSecAttrModificationDate: [NSDate date]};
+        
+        OSStatus status = SecItemUpdate((__bridge CFDictionaryRef)query,
+                                        (__bridge CFDictionaryRef)attr);
+        
+        if (status == errSecSuccess) {
+            NSLog(@"アップデートに成功しました。");
+        }
+        else {
+            NSLog(@"アップデートに失敗しました。");
+        }
+    }
+    // not found
+    else if (err == errSecItemNotFound) {
+        
+        // なかったら新規追加
+        //
+        NSLog(@"トークンが存在しません");
+    }
+}
+
+- (IBAction)pushedLoadKeychain:(id)sender {
+    NSDictionary *query = @{
+                            (__bridge id)kSecClass      : (__bridge id)kSecClassGenericPassword,
+                            (__bridge id)kSecAttrAccount: @"Account",
+                            (__bridge id)kSecAttrService: @"APP_NAME",
+                            (__bridge id)kSecReturnData : (__bridge id)kCFBooleanTrue
+                            };
+    
+    CFDataRef token = nil;
+    OSStatus err = SecItemCopyMatching((__bridge CFDictionaryRef)query,(CFTypeRef *)&token);
+    NSData *tokenData = (__bridge_transfer NSData *)token;
+    NSString *accessToken = nil;
+    
+    if (err == errSecSuccess) {
+        // 成功
+        NSLog(@"キーチェン取得に成功しました。");
+        
+        accessToken = [[NSString alloc] initWithData:tokenData
+                                            encoding:NSUTF8StringEncoding];
+    }
+    else if (err == errSecItemNotFound) {
+        // NotFound
+        NSLog(@"トークンが存在しません");
+    }
+    else {
+        // Error
+        NSLog(@"取得に失敗しました。");
+    }    
 }
 
 // アラートのボタンが押された時に呼ばれるデリゲート

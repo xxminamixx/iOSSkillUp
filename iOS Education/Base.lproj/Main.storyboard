@@ -307,6 +307,20 @@
                                     <segue destination="TxE-Wi-qxH" kind="push" id="Ksz-d5-VPf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJJ-1g-Q25">
+                                <rect key="frame" x="141" y="133" width="32" height="30"/>
+                                <state key="normal" title="save"/>
+                                <connections>
+                                    <action selector="pushedSaveKeychain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fCs-QH-7Uo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkT-Pz-fwZ">
+                                <rect key="frame" x="203" y="133" width="30" height="30"/>
+                                <state key="normal" title="load"/>
+                                <connections>
+                                    <action selector="pushedLoadKeychain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ze-7w-kmh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
