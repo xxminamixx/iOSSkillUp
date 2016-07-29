@@ -31,6 +31,7 @@ NSString * const kKeyDic = @"KEY_CHAIN_SHARING_KEY_DIC";
 - (IBAction)pushedSendAsynchronousButton:(id)sender;
 - (IBAction)pushedModalButton:(id)sender;
 - (IBAction)pushedCollectionButton:(id)sender;
+- (IBAction)pushedAleartViewButton:(id)sender;
 
 @end
 
@@ -187,7 +188,7 @@ NSString * const kKeyDic = @"KEY_CHAIN_SHARING_KEY_DIC";
     NSInteger num = 1;
     
 // デバッグする箇所に条件を付けるなど
-#define DEBUG 1
+//#define DEBUG 1
     
 #if 0
     num = 1;
@@ -243,7 +244,7 @@ NSString * const kKeyDic = @"KEY_CHAIN_SHARING_KEY_DIC";
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)viewDidAppear:(BOOL)animated
 {
     // 通知の受信
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
@@ -254,6 +255,8 @@ NSString * const kKeyDic = @"KEY_CHAIN_SHARING_KEY_DIC";
 - (void)dismissModalCall
 {
     NSLog(@"通知を受信しました");
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+
 }
 
 - (IBAction)pushedSendSynchronousButton:(id)sender {
@@ -283,6 +286,27 @@ NSString * const kKeyDic = @"KEY_CHAIN_SHARING_KEY_DIC";
 }
 
 - (IBAction)pushedCollectionButton:(id)sender {
+    
+}
+
+- (IBAction)pushedAleartViewButton:(id)sender {
+    UIAlertView *alert =
+    [[UIAlertView alloc] initWithTitle:@"確認" message:@"削除してもよろしいですか？"
+                              delegate:self cancelButtonTitle:@"いいえ" otherButtonTitles:@"はい", nil];
+    [alert show];
+}
+
+// アラートのボタンが押された時に呼ばれるデリゲート
+-(void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    switch (buttonIndex) {
+        case 0:
+            NSLog(@"キャンセルされました");
+            break;
+        case 1:
+            NSLog(@"確定されました");
+            break;
+    }
     
 }
 
