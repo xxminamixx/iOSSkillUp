@@ -32,7 +32,7 @@
     CGSize bodySize = [self.label.attributedText boundingRectWithSize:CGSizeMake(bodyLabelW, MAXFLOAT)
                                                                   options:NSStringDrawingUsesLineFragmentOrigin
                                                                   context:nil].size;
-    NSLog(@"%f", MAXFLOAT);
+//    NSLog(@"%f", MAXFLOAT);
     return bodySize.height + margin;
 }
 
