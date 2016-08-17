@@ -48,6 +48,7 @@
     self.tabBarController.selectedIndex = 1;
 }
 
+# pragma -mark - FMDB Method
 - (IBAction)pushedCreateTableButton:(id)sender
 {
     FMDatabase *db = [self connectingDB: self.tableName];
@@ -104,7 +105,7 @@
     return db;
 }
 
-
+#pragma -mark - PickerView Delegate
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView*)pickerView
 {
     return 1;
