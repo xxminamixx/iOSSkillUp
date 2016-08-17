@@ -11,13 +11,13 @@
 @implementation Square
 
 - (id) initWithLength:(float)length {
-//    self = [super initWithWidth:length height:length];
-//    if (self) {
-//    }
-//    return self;
-    if (self = [super initWithHeight:length]) {
+    self = [super initWithWidth:length height:length];
+    if (self) {
     }
     return self;
+//    if (self = [super initWithHeight:length]) {
+//    }
+//    return self;
 }
 
 //- (id) init {
