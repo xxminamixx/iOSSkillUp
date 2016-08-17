@@ -68,7 +68,9 @@ NSString * const kLongName140 = @"１２３４５６７８９８７６５４３�
 #pragma mark - UITableView Delegate
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    NSLog(@"numberOfRowInSectionが呼ばれました");
     return self.arrayForCellText.count + 1;
+    
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -84,7 +86,7 @@ NSString * const kLongName140 = @"１２３４５６７８９８７６５４３�
         // 最下部のセルの設定
         cell.label.text = @"さらに読み込む";
     }
-    
+    NSLog(@"セル：%ld",indexPath.row);
     return cell;
 }
 
@@ -98,7 +100,7 @@ NSString * const kLongName140 = @"１２３４５６７８９８７６５４３�
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CustomTableViewCell *cell = (CustomTableViewCell*)[self tableView:self.tableView cellForRowAtIndexPath:indexPath];
-    
+    NSLog(@"高さ：%ld",indexPath.row);
     return cell.height;
 }
 
