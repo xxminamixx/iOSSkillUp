@@ -99,7 +99,6 @@ typedef void (^UIAlertViewCompletionBlock) (UIAlertView *alertView, NSInteger bu
     // 左に2つのアイテムを追加
     self.navigationItem.leftBarButtonItems = @[leftBtn, othreLeftBtn];
     
-    
     /*** init ***/
     Square *square = [[Square alloc ]init];
     NSLog(@"%f", square.width);
@@ -164,13 +163,6 @@ typedef void (^UIAlertViewCompletionBlock) (UIAlertView *alertView, NSInteger bu
     
     Fetcher *fetcher = [Fetcher new];
     [fetcher GTMsessionFetcher];
-    
-//    // キューの作成
-//    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
-//    // 実行内容
-//    dispatch_async(queue, ^{
-//        NSLog(@"優先度:高");
-//    });
     
     // dispatch_get_global_queueで優先度別のキューを取得
     // dispatch_syncは同期的に実行され他の処理が止まる
@@ -347,9 +339,7 @@ typedef void (^UIAlertViewCompletionBlock) (UIAlertView *alertView, NSInteger bu
     [fetcher wikipediaAPIFetcher:^(NSMutableArray *array){
         // 配列を受け取る
         self.watchAtrribute = array;
-//        WikipediaEntity *entity = [WikipediaEntity new];
-//        entity = self.watchAtrribute[0];
-//        self.label.text = entity.contents;
+
     }];
 }
 
@@ -548,15 +538,4 @@ typedef void (^UIAlertViewCompletionBlock) (UIAlertView *alertView, NSInteger bu
 }
 
 @end
-//
-//@implementation ModalViewController
-//
-//- (void)viewDidLoad
-//{
-////    self.viewControllerProperty = @"可視性のテスト";
-////    NSLog(@"%@", self.viewControllerProperty);
-//
-//}
-//
-//@end
-//
+
