@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+//typedef void(^completedBlock)(void);
+
 @interface ViewController : UIViewController
 
 @property NSString *viewControllerProperty;
 @property NSString *alertViewNextText;
 @property NSString *alertViewBackText;
+//@property completedBlock block;
 
 @end
 

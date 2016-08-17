@@ -103,6 +103,7 @@ typedef void (^UIAlertViewCompletionBlock) (UIAlertView *alertView, NSInteger bu
     /*** init ***/
     Square *square = [[Square alloc ]init];
     NSLog(@"%f", square.width);
+    NSLog(@"%f", square.height);
     self.label.text = [NSString stringWithFormat:@"%f", square.width];
     
     /*** strong, weak***/
@@ -199,6 +200,35 @@ typedef void (^UIAlertViewCompletionBlock) (UIAlertView *alertView, NSInteger bu
         NSLog(@"メインスレッドで実行");
     });
     
+//    // blocksの循環参照
+//    self.block = ^{
+//        self.alertViewBackText = @"leak";
+//    };
+    
+    void(^completed)(void) = ^(void){
+        NSLog(@"log");
+    };
+    
+    __block NSInteger number = 10;
+    void (^completedBlock)(void) = ^(void){
+        number = 20;
+        NSLog(@"キャプチャテスト%ld", number);
+    };
+    completedBlock();
+    
+    
+    
+    /*
+     
+    //エラーとなる
+     NSInteger number = 10;
+     void (^completedBlock)(void) = ^(void){
+         number = 20;
+         NSLog(@"キャプチャテスト%ld", number);
+     };
+     completedBlock();
+     
+    */
     
     // 条件つきコンパイル
     NSInteger num = 1;
@@ -223,7 +253,7 @@ typedef void (^UIAlertViewCompletionBlock) (UIAlertView *alertView, NSInteger bu
 #else
 #endif
 
-//#define HOGE
+#define HOGE
 #ifdef DEBUG
     NSLog(@"定義済みのとき出力されます");
 #else
@@ -276,7 +306,16 @@ typedef void (^UIAlertViewCompletionBlock) (UIAlertView *alertView, NSInteger bu
         NSLog(@"保存に失敗しました。");
     }
     
+    void (^myBlock)(int) = ^(int i){
+        NSLog(@"%d",i);
+    };
+    
+    myBlock(10);
 }
+
+- (void)hoge{}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
