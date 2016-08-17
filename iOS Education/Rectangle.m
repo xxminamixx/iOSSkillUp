@@ -29,4 +29,13 @@
     return self;
 }
 
+- (id)initWithHeight:(int)height{
+    if (self = [self initWithWidth:1 height:height]) {
+        self.height = height;
+    }
+    return self;
+}
+
+
+
 @end

@@ -15,4 +15,5 @@
 @property float width;
 @property float height;
 - (id) initWithWidth:(float)width height:(float)height;
+- (id)initWithHeight:(int)height;
 @end

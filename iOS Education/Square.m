@@ -11,11 +11,22 @@
 @implementation Square
 
 - (id) initWithLength:(float)length {
-    self = [super initWithWidth:length height:length];
-    if (self) {
+//    self = [super initWithWidth:length height:length];
+//    if (self) {
+//    }
+//    return self;
+    if (self = [super initWithHeight:length]) {
     }
     return self;
 }
+
+//- (id) init {
+//    if (self = [super init]) {
+//        self.height = 100;
+//        self.width = 120;
+//    }
+//    return self;
+//}
 
 //親クラス指定イニシャライザは必ずオーバーライドする
 - (id) initWithWidth:(float)width height:(float)height {
