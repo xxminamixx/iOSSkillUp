@@ -213,7 +213,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c5h-0u-wbz">
-                                <rect key="frame" x="134" y="283" width="99" height="21"/>
+                                <rect key="frame" x="134" y="283" width="61" height="21"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -302,20 +302,28 @@
                                     <segue destination="TxE-Wi-qxH" kind="push" id="Ksz-d5-VPf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gkT-Pz-fwZ">
-                                <rect key="frame" x="203" y="133" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="load"/>
-                                <connections>
-                                    <action selector="pushedLoadKeychain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ze-7w-kmh"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AJJ-1g-Q25">
-                                <rect key="frame" x="141" y="133" width="32" height="30"/>
+                                <rect key="frame" x="134" y="133" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="save"/>
                                 <connections>
                                     <action selector="pushedSaveKeychain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fCs-QH-7Uo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nnC-dL-Tl7">
+                                <rect key="frame" x="203" y="279" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="resize"/>
+                                <connections>
+                                    <action selector="resizeOfLabelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6q6-5a-zsF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gkT-Pz-fwZ">
+                                <rect key="frame" x="211" y="133" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="load"/>
+                                <connections>
+                                    <action selector="pushedLoadKeychain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ze-7w-kmh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -333,7 +341,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31.733333333333334" y="353.57999999999998"/>
+            <point key="canvasLocation" x="31.5" y="353.5"/>
         </scene>
         <!--Modal View Controller-->
         <scene sceneID="Gu1-Ml-o2E">

@@ -48,6 +48,7 @@ typedef void (^UIAlertViewCompletionBlock) (UIAlertView *alertView, NSInteger bu
 - (IBAction)pushedAleartViewButton:(id)sender;
 - (IBAction)pushedSaveKeychain:(id)sender;
 - (IBAction)pushedLoadKeychain:(id)sender;
+- (IBAction)resizeOfLabelButton:(id)sender;
 
 @end
 
@@ -459,6 +460,10 @@ typedef void (^UIAlertViewCompletionBlock) (UIAlertView *alertView, NSInteger bu
     }    
 }
 
+- (IBAction)resizeOfLabelButton:(id)sender {
+    [self resizeOfButton];
+}
+
 // アラートのボタンが押された時に呼ばれるデリゲート
 -(void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     
@@ -535,6 +540,21 @@ typedef void (^UIAlertViewCompletionBlock) (UIAlertView *alertView, NSInteger bu
 - (void)handleSwipeRightGesture
 {
     NSLog(@"右へスワイプしました");
+}
+
+- (void)resizeOfButton
+{
+    CGRect labelFrame;
+    labelFrame.size.height = self.label.frame.size.height;
+    labelFrame.size.width = self.label.frame.size.width;
+    labelFrame.origin.x = self.view.bounds.size.width / 2;
+//    labelFrame.origin.y = self.view.bounds.size.height / 2;
+    labelFrame.origin.y = 0;
+    
+    self.label.frame = labelFrame;
+    [self.view setNeedsLayout];
+    [self.view layoutIfNeeded];
+    
 }
 
 @end
