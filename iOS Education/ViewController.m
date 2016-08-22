@@ -208,8 +208,6 @@ typedef void (^UIAlertViewCompletionBlock) (UIAlertView *alertView, NSInteger bu
     };
     completedBlock();
     
-    
-    
     /*
      
     //エラーとなる
@@ -514,7 +512,6 @@ typedef void (^UIAlertViewCompletionBlock) (UIAlertView *alertView, NSInteger bu
     } else {
         [self performSegueWithIdentifier:@"toTableView" sender:self];
     }
-    
 }
 
 - (void)handleTapGesture

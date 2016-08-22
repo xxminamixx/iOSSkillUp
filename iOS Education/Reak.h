@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface Reak : NSObject
+
 @property (strong) id pointer;
+
 - (void)setFriend:(id)obj;
+
 @end

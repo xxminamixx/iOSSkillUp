@@ -10,5 +10,7 @@
 #import "Rectangle.h"
 
 @interface Square : Rectangle
+
 - (id) initWithWidth:(float)width height:height;
+
 @end

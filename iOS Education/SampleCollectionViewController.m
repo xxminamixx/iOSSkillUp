@@ -9,8 +9,8 @@
 #import "SampleCollectionViewController.h"
 
 @interface SampleCollectionViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
