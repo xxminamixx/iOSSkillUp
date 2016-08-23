@@ -18,6 +18,9 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFg-KM-pDG">
                     <rect key="frame" x="77" y="269" width="167" height="30"/>
                     <state key="normal" title="toXibFirstViewController"/>
+                    <connections>
+                        <action selector="pushedToXibFirstViewController:" destination="-1" eventType="touchUpInside" id="oIE-5B-iVX"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

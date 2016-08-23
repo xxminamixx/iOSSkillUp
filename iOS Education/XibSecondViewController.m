@@ -7,8 +7,11 @@
 //
 
 #import "XibSecondViewController.h"
+#import "XibFirstViewController.h"
 
 @interface XibSecondViewController ()
+
+- (IBAction)pushedToXibFirstViewController:(id)sender;
 
 @end
 
@@ -34,4 +37,10 @@
 }
 */
 
+- (IBAction)pushedToXibFirstViewController:(id)sender
+{
+    XibFirstViewController * xibFirstViewController;
+    xibFirstViewController = [[XibFirstViewController alloc] initWithNibName:@"XibFirstViewController" bundle:nil];
+    [self presentViewController:xibFirstViewController animated:YES completion:nil];
+}
 @end

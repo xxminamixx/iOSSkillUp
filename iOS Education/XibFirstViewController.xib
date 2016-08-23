@@ -18,6 +18,9 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIJ-jJ-VWv">
                     <rect key="frame" x="66" y="269" width="189" height="30"/>
                     <state key="normal" title="toXibSecondViewController"/>
+                    <connections>
+                        <action selector="pushedToXibSecondViewControllerButton:" destination="-1" eventType="touchUpInside" id="pmk-Zc-fKU"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
