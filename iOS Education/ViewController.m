@@ -15,6 +15,7 @@
 #import "Human.h"
 #import "LUKeychainAccess.h"
 #import "AlertViewWithBlock.h"
+#import "Fetcher+sendAsynchronousFoodFetcherOverride.h"
 
 //NSString * const kToViewController = @"ViewController";
 NSString * const kKeyDic = @"KEY_CHAIN_SHARING_KEY_DIC";
