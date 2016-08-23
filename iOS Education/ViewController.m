@@ -16,6 +16,7 @@
 #import "LUKeychainAccess.h"
 #import "AlertViewWithBlock.h"
 #import "Fetcher+sendAsynchronousFoodFetcherOverride.h"
+#import "XibFirstViewController.h"
 
 //NSString * const kToViewController = @"ViewController";
 NSString * const kKeyDic = @"KEY_CHAIN_SHARING_KEY_DIC";
@@ -49,6 +50,7 @@ typedef void (^UIAlertViewCompletionBlock) (UIAlertView *alertView, NSInteger bu
 - (IBAction)pushedAleartViewButton:(id)sender;
 - (IBAction)pushedSaveKeychain:(id)sender;
 - (IBAction)pushedLoadKeychain:(id)sender;
+- (IBAction)pushedXibButton:(id)sender;
 
 @end
 
@@ -457,6 +459,14 @@ typedef void (^UIAlertViewCompletionBlock) (UIAlertView *alertView, NSInteger bu
         NSLog(@"取得に失敗しました。");
     }    
 }
+
+- (IBAction)pushedXibButton:(id)sender
+{
+    XibFirstViewController *xibFirstViewController;
+    xibFirstViewController = [[XibFirstViewController alloc] initWithNibName:@"XibFirstViewController" bundle:nil];
+    [self presentViewController:xibFirstViewController animated:YES completion:nil];
+}
+
 
 // アラートのボタンが押された時に呼ばれるデリゲート
 -(void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {

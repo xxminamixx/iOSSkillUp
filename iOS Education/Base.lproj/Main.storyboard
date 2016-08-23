@@ -321,6 +321,13 @@
                                     <action selector="pushedLoadKeychain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ze-7w-kmh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="db6-ac-B5j">
+                                <rect key="frame" x="249" y="283" width="30" height="30"/>
+                                <state key="normal" title="xib"/>
+                                <connections>
+                                    <action selector="pushedXibButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ckK-zs-Tlr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
